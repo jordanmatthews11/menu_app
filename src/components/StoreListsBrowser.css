@@ -1,0 +1,206 @@
+/* =============================================
+   Store Lists Browser
+   ============================================= */
+.slb {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.slb-loading,
+.slb-empty {
+  text-align: center;
+  color: #888;
+  padding: 4rem 0;
+  font-size: 1.05rem;
+}
+
+/* Header */
+.slb-header {
+  margin-bottom: 1rem;
+}
+
+.slb-header h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin: 0 0 0.4rem 0;
+}
+
+.slb-subtitle {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Toolbar / Search */
+.slb-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.slb-search {
+  flex: 1;
+  max-width: 400px;
+  padding: 0.65rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.slb-search:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.slb-search-count {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Horizontal scroll container */
+.slb-scroll {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.slb-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.slb-scroll::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 4px;
+}
+.slb-scroll::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
+}
+.slb-scroll::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Card */
+.slb-card {
+  flex: 0 0 260px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slb-card-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+}
+
+.slb-card-title {
+  margin: 0 0 0.35rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slb-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.slb-country {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.slb-count {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* Table inside card */
+.slb-card-table-wrap {
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+.slb-card-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.slb-card-table thead {
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  z-index: 1;
+}
+
+.slb-card-table th {
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.slb-card-table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #495057;
+}
+
+.slb-card-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.slb-card-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.slb-card-table th:nth-child(2),
+.slb-card-table th:nth-child(3) {
+  text-align: right;
+}
+
+.slb-card-table tfoot {
+  position: sticky;
+  bottom: 0;
+  background: #f8f9fa;
+}
+
+.slb-card-table tfoot td {
+  font-weight: 700;
+  color: #333;
+  border-top: 2px solid #dee2e6;
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .slb {
+    padding: 1rem;
+  }
+
+  .slb-card {
+    flex: 0 0 220px;
+  }
+}

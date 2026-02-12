@@ -5,11 +5,15 @@ import { Header } from './components/Layout/Header';
 import { CategorySelection } from './components/CategorySelection';
 import { ConfigureSelections } from './components/ConfigureSelections/ConfigureSelections';
 import { OrderTable } from './components/OrderTable';
+import { StoreListsBrowser } from './components/StoreListsBrowser';
 import './App.css';
 
 const STORAGE_KEY = 'orderEntries';
 
+type ActiveTab = 'order' | 'storeLists';
+
 function App() {
+  const [activeTab, setActiveTab] = useState<ActiveTab>('order');
   const [step, setStep] = useState(1);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [entries, setEntries] = useState<OrderEntry[]>([]);
@@ -78,30 +82,51 @@ function App() {
 
   return (
     <div className="app">
-      <Header currentStep={step} totalSteps={TOTAL_STEPS} />
+      <Header currentStep={step} totalSteps={TOTAL_STEPS} showSteps={activeTab === 'order'} />
+
+      <nav className="tab-bar">
+        <button
+          className={`tab-btn${activeTab === 'order' ? ' tab-btn--active' : ''}`}
+          onClick={() => setActiveTab('order')}
+        >
+          Order Submission
+        </button>
+        <button
+          className={`tab-btn${activeTab === 'storeLists' ? ' tab-btn--active' : ''}`}
+          onClick={() => setActiveTab('storeLists')}
+        >
+          Standard Store Lists
+        </button>
+      </nav>
 
       <main className="main-content">
-        {step === 1 && (
-          <CategorySelection
-            selectedCategories={selectedCategories}
-            onNext={handleCategoryNext}
-          />
+        {activeTab === 'order' && (
+          <>
+            {step === 1 && (
+              <CategorySelection
+                selectedCategories={selectedCategories}
+                onNext={handleCategoryNext}
+              />
+            )}
+
+            {step === 2 && (
+              <ConfigureSelections
+                categories={categories}
+                selectedCategoryIds={selectedCategories}
+                onBack={handleConfigBack}
+                onSubmit={handleConfigSubmit}
+              />
+            )}
+
+            <OrderTable
+              entries={entries}
+              onDelete={handleDelete}
+              onClearAll={handleClearAll}
+            />
+          </>
         )}
 
-        {step === 2 && (
-          <ConfigureSelections
-            categories={categories}
-            selectedCategoryIds={selectedCategories}
-            onBack={handleConfigBack}
-            onSubmit={handleConfigSubmit}
-          />
-        )}
-
-        <OrderTable
-          entries={entries}
-          onDelete={handleDelete}
-          onClearAll={handleClearAll}
-        />
+        {activeTab === 'storeLists' && <StoreListsBrowser />}
       </main>
     </div>
   );
