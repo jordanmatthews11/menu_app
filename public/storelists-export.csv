@@ -1,0 +1,589 @@
+weeklyQuota,retailer,monthlyQuota,country,id,name
+17,Woolworth’s,68,AU,storeLists-AustraliaStandardMix-202-dutaq,Australia - Standard Mix
+3,Foodworks,12,AU,storeLists-AustraliaStandardMix-202-g2jep,Australia - Standard Mix
+17,Cole’s,68,AU,storeLists-AustraliaStandardMix-202-mp9hi,Australia - Standard Mix
+8,Aldi,32,AU,storeLists-AustraliaStandardMix-202-pajsz,Australia - Standard Mix
+5,IGA,20,AU,storeLists-AustraliaStandardMix-202-txgn2,Australia - Standard Mix
+25,Walmart,100,US,storeLists-Auto-202-1755f,Auto
+15,Auto Zone,60,US,storeLists-Auto-202-9gs4p,Auto
+5,Sam's Club,20,US,storeLists-Auto-202-afnwa,Auto
+15,O'Reilly's,60,US,storeLists-Auto-202-ayvn0,Auto
+15,Target,60,US,storeLists-Auto-202-erp6s,Auto
+10,Costco,40,US,storeLists-Auto-202-ryedc,Auto
+15,Advanced Auto Parts,60,US,storeLists-Auto-202-stzh0,Auto
+4,London Drugs,16,CA,storeLists-Auto-204-02h91,Auto
+3,Costco ON,10,CA,storeLists-Auto-204-0elpi,Auto
+4,Fountain Tire,16,CA,storeLists-Auto-204-6ve31,Auto
+2,Giant Tiger QC,8,CA,storeLists-Auto-204-83kqi,Auto
+3,Walmart WEST,12,CA,storeLists-Auto-204-aoyqk,Auto
+4,Fountain Tire,16,CA,storeLists-Auto-204-cpod9,Auto
+3,Costco WEST,10,CA,storeLists-Auto-204-eg3ws,Auto
+2,Giant Tiger WEST,8,CA,storeLists-Auto-204-ehqey,Auto
+2,Giant Tiger ATL,8,CA,storeLists-Auto-204-f4xki,Auto
+4,Tirecraft,16,CA,storeLists-Auto-204-fb6hp,Auto
+4,Princess Auto,16,CA,storeLists-Auto-204-h841r,Auto
+3,Walmart QC,12,CA,storeLists-Auto-204-kynbo,Auto
+3,Walmart ON,12,CA,storeLists-Auto-204-lg0pj,Auto
+3,Costco ATL,10,CA,storeLists-Auto-204-lsmbj,Auto
+3,Canadian Tire ATL,12,CA,storeLists-Auto-204-mjoto,Auto
+3,Canadian Tire ON,12,CA,storeLists-Auto-204-p5y9l,Auto
+3,Canadian Tire WEST,12,CA,storeLists-Auto-204-qpl5r,Auto
+3,Costco QC,10,CA,storeLists-Auto-204-rgfdh,Auto
+2,Giant Tiger ON,8,CA,storeLists-Auto-204-t1lgq,Auto
+4,NAPA Auto Parts,16,CA,storeLists-Auto-204-vzitp,Auto
+3,Canadian Tire QC,12,CA,storeLists-Auto-204-wd81m,Auto
+3,Walmart ATL,12,CA,storeLists-Auto-204-wn1ub,Auto
+4,OK Tire,16,CA,storeLists-Auto-204-zv7jb,Auto
+10,BJ's,40,US,storeLists-Club-202-beh46,Club
+25,Sam's Club,100,US,storeLists-Club-202-cl38h,Club
+65,Costco,260,US,storeLists-Club-202-w2wp1,Club
+25,Walmart,100,US,storeLists-ConsumerElectronics-202-4mf0o,Consumer Electronics
+35,Best Buy,140,US,storeLists-ConsumerElectronics-202-9buva,Consumer Electronics
+10,Costco,40,US,storeLists-ConsumerElectronics-202-n2dn8,Consumer Electronics
+20,Target,80,US,storeLists-ConsumerElectronics-202-o62rz,Consumer Electronics
+10,Sam's Club,40,US,storeLists-ConsumerElectronics-202-o7l17,Consumer Electronics
+20,Costco,80,US,0rVGQPh9kxEge5TBCyw4,Consumer Electronics - Small Kitchen Appliances
+10,Sam's Club,40,US,8IMOqIItQkoWEsk0u4tO,Consumer Electronics - Small Kitchen Appliances
+30,Target,120,US,P87vUDpLalUFT4qrFEIH,Consumer Electronics - Small Kitchen Appliances
+30,Walmart,120,US,qZKGQV2TyrC21UoVFJwV,Consumer Electronics - Small Kitchen Appliances
+10,Best Buy,40,US,uszNN6OWkdPDWneDq2vA,Consumer Electronics - Small Kitchen Appliances
+20,Shell,80,US,storeLists-ConvenienceStore-202-gxxyp,Convenience Store
+15,Circle K,60,US,storeLists-ConvenienceStore-202-jz3um,Convenience Store
+20,7-Eleven,80,US,storeLists-ConvenienceStore-202-lvova,Convenience Store
+4,Sunoco,16,US,storeLists-ConvenienceStore-203-16jgc,Convenience Store
+4,QuikTrip,16,US,storeLists-ConvenienceStore-203-2pv9o,Convenience Store
+4,Murphy USA,16,US,storeLists-ConvenienceStore-203-7kpe5,Convenience Store
+10,BP,40,US,storeLists-ConvenienceStore-203-a39lx,Convenience Store
+2,Fas Mart,8,US,storeLists-ConvenienceStore-203-ce4q4,Convenience Store
+3,Sheetz,12,US,storeLists-ConvenienceStore-203-f0ouw,Convenience Store
+4,Wawa,16,US,storeLists-ConvenienceStore-203-ftwzk,Convenience Store
+4,Speedway,16,US,storeLists-ConvenienceStore-203-i8rp2,Convenience Store
+4,Casey's General Store,16,US,storeLists-ConvenienceStore-203-pnkv7,Convenience Store
+4,Cumberland Farms,16,US,storeLists-ConvenienceStore-203-ruqzb,Convenience Store
+2,Loves Travel,8,US,storeLists-ConvenienceStore-203-rvrm7,Convenience Store
+3,Uniprix,12,CA,storeLists-Cosmetics-2139-01ciy,Cosmetics
+4,Walmart QC,16,CA,storeLists-Cosmetics-2139-3oh6p,Cosmetics
+2,Brunet,8,CA,storeLists-Cosmetics-2139-4aghu,Cosmetics
+4,Shoppers Drug Mart  QC,16,CA,storeLists-Cosmetics-2139-4vlje,Cosmetics
+3,Walmart ATL,12,CA,storeLists-Cosmetics-2139-4yk9o,Cosmetics
+5,Real Canadian Superstore WEST,20,CA,storeLists-Cosmetics-2139-6gvel,Cosmetics
+1,Dominion,4,CA,storeLists-Cosmetics-2139-7vro3,Cosmetics
+2,Sephora Canada,8,CA,storeLists-Cosmetics-2139-9ss91,Cosmetics
+6,Walmart ON,24,CA,storeLists-Cosmetics-2139-dtngv,Cosmetics
+3,Shoppers Drug Mart  ATL,12,CA,storeLists-Cosmetics-2139-huie2,Cosmetics
+2,London Drugs,8,CA,storeLists-Cosmetics-2139-jyg0h,Cosmetics
+2,Rexall ON,8,CA,storeLists-Cosmetics-2139-lxsyc,Cosmetics
+3,Rexall WEST,12,CA,storeLists-Cosmetics-2139-ma9oc,Cosmetics
+6,Shoppers Drug Mart  WEST,24,CA,storeLists-Cosmetics-2139-mozin,Cosmetics
+3,Lawtons,12,CA,storeLists-Cosmetics-2139-ntn17,Cosmetics
+2,Loblaws,8,CA,storeLists-Cosmetics-2139-pt1vt,Cosmetics
+2,Familiprix,8,CA,storeLists-Cosmetics-2139-q62z6,Cosmetics
+4,Shoppers Drug Mart  ON,16,CA,storeLists-Cosmetics-2139-s0v7p,Cosmetics
+2,Real Atlantic Superstore,8,CA,storeLists-Cosmetics-2139-s6r4h,Cosmetics
+5,Walmart WEST,20,CA,storeLists-Cosmetics-2139-sypri,Cosmetics
+2,Real Canadian Superstore ON,8,CA,storeLists-Cosmetics-2139-x4k4j,Cosmetics
+4,Jean Coutu,16,CA,storeLists-Cosmetics-2139-y6n5c,Cosmetics
+15,TIA,60,EC,storeLists-EcuadorStandardMix-201-a7uum,Ecuador - Standard Mix
+4,AKI,16,EC,storeLists-EcuadorStandardMix-201-ei880,Ecuador - Standard Mix
+21,TUTI,84,EC,storeLists-EcuadorStandardMix-201-p59cj,Ecuador - Standard Mix
+4,SUPERMAXI,16,EC,storeLists-EcuadorStandardMix-202-hjs3h,Ecuador - Standard Mix
+2,CORAL,8,EC,storeLists-EcuadorStandardMix-202-ip2l6,Ecuador - Standard Mix
+4,MI COMISARIATO,16,EC,storeLists-EcuadorStandardMix-202-zol65,Ecuador - Standard Mix
+25,Walmart,100,US,storeLists-GeneralMerchandise-203-8pc1x,General Merchandise
+5,CVS,20,US,storeLists-GeneralMerchandise-203-dug1s,General Merchandise
+5,Family Dollar,20,US,storeLists-GeneralMerchandise-203-fs77e,General Merchandise
+5,Walgreens,20,US,storeLists-GeneralMerchandise-203-keud8,General Merchandise
+15,Costco,60,US,storeLists-GeneralMerchandise-203-ooup6,General Merchandise
+15,Sam's Club,60,US,storeLists-GeneralMerchandise-203-rs339,General Merchandise
+10,Dollar General,40,US,storeLists-GeneralMerchandise-203-xhwb7,General Merchandise
+20,Target,80,US,storeLists-GeneralMerchandise-203-yiiij,General Merchandise
+1,Fresh Co. WEST,4,CA,storeLists-GeneralMerchandise-204-1d0fd,General Merchandise
+3,Real Canadian Superstore ON,12,CA,storeLists-GeneralMerchandise-204-1qlqh,General Merchandise
+2,Costco ATL,8,CA,storeLists-GeneralMerchandise-204-2ixtr,General Merchandise
+1,Sobeys ATL,4,CA,storeLists-GeneralMerchandise-204-2qoyl,General Merchandise
+1,Dollarama QC,4,CA,storeLists-GeneralMerchandise-204-3mq6g,General Merchandise
+1,Dollarama ATL,4,CA,storeLists-GeneralMerchandise-204-5vpmc,General Merchandise
+2,London Drugs,8,CA,storeLists-GeneralMerchandise-204-70t5z,General Merchandise
+2,Costco WEST,8,CA,storeLists-GeneralMerchandise-204-8e09e,General Merchandise
+1,Calgary Co-op,4,CA,storeLists-GeneralMerchandise-204-acx2l,General Merchandise
+1,Canadian Tire ATL,4,CA,storeLists-GeneralMerchandise-204-agzn0,General Merchandise
+1,Dominion,4,CA,storeLists-GeneralMerchandise-204-dc1rb,General Merchandise
+2,Independent (YIG) ON,8,CA,storeLists-GeneralMerchandise-204-dlo80,General Merchandise
+1,Dollarama WEST,4,CA,storeLists-GeneralMerchandise-204-doge5,General Merchandise
+1,Fresh Co. ON,4,CA,storeLists-GeneralMerchandise-204-dql1i,General Merchandise
+2,Nofrills ON,8,CA,storeLists-GeneralMerchandise-204-dzo74,General Merchandise
+1,Giant Tiger QC,4,CA,storeLists-GeneralMerchandise-204-ef80f,General Merchandise
+2,Safeway,8,CA,storeLists-GeneralMerchandise-204-f2plp,General Merchandise
+3,Real Canadian Superstore WEST,12,CA,storeLists-GeneralMerchandise-204-gvids,General Merchandise
+2,Costco QC,8,CA,storeLists-GeneralMerchandise-204-h4ybe,General Merchandise
+2,Costco ON,8,CA,storeLists-GeneralMerchandise-204-ieouw,General Merchandise
+2,Canadian Tire QC,8,CA,storeLists-GeneralMerchandise-204-iw96z,General Merchandise
+4,Loblaws,16,CA,storeLists-GeneralMerchandise-204-ky90q,General Merchandise
+2,Sobeys ON,8,CA,storeLists-GeneralMerchandise-204-lb9wt,General Merchandise
+1,Sobeys WEST,4,CA,storeLists-GeneralMerchandise-204-lqh6g,General Merchandise
+2,IGA Extra QC,8,CA,storeLists-GeneralMerchandise-204-m0m11,General Merchandise
+2,Nofrills WEST,8,CA,storeLists-GeneralMerchandise-204-m5jq8,General Merchandise
+2,Canadian Tire WEST,8,CA,storeLists-GeneralMerchandise-204-pdgak,General Merchandise
+1,Giant Tiger WEST,4,CA,storeLists-GeneralMerchandise-204-q4qhi,General Merchandise
+1,Save On Foods,4,CA,storeLists-GeneralMerchandise-204-scuss,General Merchandise
+1,Giant Tiger ON,4,CA,storeLists-GeneralMerchandise-204-sg3jr,General Merchandise
+1,Giant Tiger ATL,4,CA,storeLists-GeneralMerchandise-204-sx76o,General Merchandise
+1,Dollarama ON,4,CA,storeLists-GeneralMerchandise-204-uv5jd,General Merchandise
+1,Nofrills ATL,4,CA,storeLists-GeneralMerchandise-204-vk7lo,General Merchandise
+2,Independent (YIG) WEST,8,CA,storeLists-GeneralMerchandise-204-x9s28,General Merchandise
+2,Canadian Tire ON,8,CA,storeLists-GeneralMerchandise-204-xykdn,General Merchandise
+1,Federated Co-op,4,CA,storeLists-GeneralMerchandise-204-ykuul,General Merchandise
+1,Longo's,4,CA,storeLists-GeneralMerchandise-204-zr287,General Merchandise
+2,Walmart WEST,8,CA,storeLists-GeneralMerchandise-205-9z4i6,General Merchandise
+2,Walmart ATL,8,CA,storeLists-GeneralMerchandise-205-gs7uu,General Merchandise
+3,Walmart ON,12,CA,storeLists-GeneralMerchandise-205-o004d,General Merchandise
+1,Super C,4,CA,storeLists-GeneralMerchandise-205-quf0g,General Merchandise
+2,Walmart QC,8,CA,storeLists-GeneralMerchandise-205-r4z9a,General Merchandise
+1,Thrifty Foods,4,CA,storeLists-GeneralMerchandise-205-yfsgs,General Merchandise
+2,Dollar General,8,US,storeLists-Grocery-203-0683d,Grocery
+5,Publix,20,US,storeLists-Grocery-203-32iyi,Grocery
+2,Family Dollar,8,US,storeLists-Grocery-203-9hi48,Grocery
+12,Albertsons (all banners),48,US,storeLists-Grocery-203-alnrb,Grocery
+10,Target,40,US,storeLists-Grocery-203-eweb7,Grocery
+3,Walgreens,12,US,storeLists-Grocery-203-gozbz,Grocery
+12,Kroger,48,US,storeLists-Grocery-203-l6mxp,Grocery
+10,Ahold,40,US,storeLists-Grocery-203-m5pg2,Grocery
+8,Sam's Club,32,US,storeLists-Grocery-203-rivtn,Grocery
+20,Walmart,80,US,storeLists-Grocery-203-s4az5,Grocery
+2,HEB,8,US,storeLists-Grocery-203-svtq7,Grocery
+2,CVS,8,US,storeLists-Grocery-203-uxiy6,Grocery
+12,Costco,48,US,storeLists-Grocery-203-xbprs,Grocery
+8,Costco,32,US,storeLists-GroceryHouseholdCStoreBlend-2140-5cqfi,Grocery/Household/C-Store Blend
+3,Walgreens,12,US,storeLists-GroceryHouseholdCStoreBlend-2140-5sqii,Grocery/Household/C-Store Blend
+8,Ahold,32,US,storeLists-GroceryHouseholdCStoreBlend-2140-7kpuw,Grocery/Household/C-Store Blend
+4,Sam's Club,16,US,storeLists-GroceryHouseholdCStoreBlend-2140-8b0lh,Grocery/Household/C-Store Blend
+3,Caseys,12,US,storeLists-GroceryHouseholdCStoreBlend-2140-8zs9c,Grocery/Household/C-Store Blend
+11,Target,44,US,storeLists-GroceryHouseholdCStoreBlend-2140-aor5q,Grocery/Household/C-Store Blend
+6,Circle K,24,US,storeLists-GroceryHouseholdCStoreBlend-2140-apgid,Grocery/Household/C-Store Blend
+3,Publix,12,US,storeLists-GroceryHouseholdCStoreBlend-2140-cjjsl,Grocery/Household/C-Store Blend
+7,Aldi,28,US,storeLists-GroceryHouseholdCStoreBlend-2140-dqq8b,Grocery/Household/C-Store Blend
+3,Dollar General,12,US,storeLists-GroceryHouseholdCStoreBlend-2140-e6gnd,Grocery/Household/C-Store Blend
+7,7-Eleven,28,US,storeLists-GroceryHouseholdCStoreBlend-2140-kqt61,Grocery/Household/C-Store Blend
+11,Walmart,44,US,storeLists-GroceryHouseholdCStoreBlend-2140-m3jyl,Grocery/Household/C-Store Blend
+8,Albertsons (all banners),32,US,storeLists-GroceryHouseholdCStoreBlend-2140-nk2ux,Grocery/Household/C-Store Blend
+3,CVS,12,US,storeLists-GroceryHouseholdCStoreBlend-2140-ovqxi,Grocery/Household/C-Store Blend
+8,Kroger,32,US,storeLists-GroceryHouseholdCStoreBlend-2140-s5dbl,Grocery/Household/C-Store Blend
+2,BJ's,8,US,storeLists-GroceryHouseholdCStoreBlend-2140-vagsl,Grocery/Household/C-Store Blend
+1,Family Dollar,4,US,storeLists-GroceryHouseholdCStoreBlend-2140-ww8kz,Grocery/Household/C-Store Blend
+3,Wawa,12,US,storeLists-GroceryHouseholdCStoreBlend-2140-z20ff,Grocery/Household/C-Store Blend
+1,HEB,4,US,storeLists-GroceryHouseholdCStoreBlend-2140-z39fi,Grocery/Household/C-Store Blend
+1,Federated Co-op Store,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-02u6e,Grocery: Refrigerated & Frozen focus
+2,Real Canadian Superstore WEST,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-07izn,Grocery: Refrigerated & Frozen focus
+1,Calgary Co-op Food Store,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-1570z,Grocery: Refrigerated & Frozen focus
+2,Metro Plus QC,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-2bake,Grocery: Refrigerated & Frozen focus
+2,Sobeys WEST,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-2kype,Grocery: Refrigerated & Frozen focus
+1,Thrifty Foods,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-3d8ha,Grocery: Refrigerated & Frozen focus
+2,Real Atlantic Superstore,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-3o4zd,Grocery: Refrigerated & Frozen focus
+1,Shoppers Drug Mart QC (Food & Household) - SG,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-3see3,Grocery: Refrigerated & Frozen focus
+1,Dominion,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-3wvb8,Grocery: Refrigerated & Frozen focus
+2,Real Canadian Superstore ON,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-5zu8y,Grocery: Refrigerated & Frozen focus
+1,Giant Tiger QC,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-652v6,Grocery: Refrigerated & Frozen focus
+3,Walmart ON (Supercentres only),12,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-6j0d1,Grocery: Refrigerated & Frozen focus
+1,Shoppers Drug Mart ON (Food & Household) - SG,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-7huvp,Grocery: Refrigerated & Frozen focus
+1,Giant Tiger ON - SG,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-93nm7,Grocery: Refrigerated & Frozen focus
+1,Food Basics,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-9lj83,Grocery: Refrigerated & Frozen focus
+2,Nofrills WEST,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-9wizg,Grocery: Refrigerated & Frozen focus
+1,Nofrills ATL,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-bfy0r,Grocery: Refrigerated & Frozen focus
+1,Safeway,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-bs0wi,Grocery: Refrigerated & Frozen focus
+1,Costco QC,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-c9bdn,Grocery: Refrigerated & Frozen focus
+2,IGA Extra QC,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-cjr3x,Grocery: Refrigerated & Frozen focus
+1,Fresh Co. ON,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-d3t1p,Grocery: Refrigerated & Frozen focus
+1,Farm Boy,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-d3umx,Grocery: Refrigerated & Frozen focus
+1,Costco MB/SK,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-dv0bu,Grocery: Refrigerated & Frozen focus
+1,Giant Tiger ATL,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-ef2kz,Grocery: Refrigerated & Frozen focus
+2,Walmart WEST (Supercentres only),8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-eq75r,Grocery: Refrigerated & Frozen focus
+2,Super C,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-ewhrb,Grocery: Refrigerated & Frozen focus
+1,Zehrs,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-fsk8z,Grocery: Refrigerated & Frozen focus
+1,Giant Tiger WEST,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-g5pyx,Grocery: Refrigerated & Frozen focus
+1,Sobeys ATL - SG,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-hmzkw,Grocery: Refrigerated & Frozen focus
+1,Fresh Co. WEST,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-holuh,Grocery: Refrigerated & Frozen focus
+1,Provigo,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-hwvbd,Grocery: Refrigerated & Frozen focus
+2,Nofrills ON,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-j1v3i,Grocery: Refrigerated & Frozen focus
+2,Walmart QC (Supercentres only),8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-jbhsg,Grocery: Refrigerated & Frozen focus
+1,Fortinos,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-jh1l7,Grocery: Refrigerated & Frozen focus
+2,Walmart ATL (Supercentres only),8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-ki5r6,Grocery: Refrigerated & Frozen focus
+1,Foodland ON,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-ks3vh,Grocery: Refrigerated & Frozen focus
+1,Shoppers Drug Mart ATL (Food & Household) - SG,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-mrg88,Grocery: Refrigerated & Frozen focus
+1,Independent (YIG) ON,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-n5w58,Grocery: Refrigerated & Frozen focus
+1,Costco AB,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-qbk59,Grocery: Refrigerated & Frozen focus
+1,Costco BC,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-qfyo3,Grocery: Refrigerated & Frozen focus
+2,Metro ON,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-qtihb,Grocery: Refrigerated & Frozen focus
+2,Loblaws,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-t1pmn,Grocery: Refrigerated & Frozen focus
+2,Save On Foods,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-u5h5d,Grocery: Refrigerated & Frozen focus
+2,Maxi,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-wc7ub,Grocery: Refrigerated & Frozen focus
+1,Shoppers Drug Mart WEST (Food & Household) - SG,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-wx3xv,Grocery: Refrigerated & Frozen focus
+2,Costco ON,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-x2wbe,Grocery: Refrigerated & Frozen focus
+1,Longo's - SG,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-xfkq2,Grocery: Refrigerated & Frozen focus
+1,Independent (YIG) WEST,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-y3238,Grocery: Refrigerated & Frozen focus
+2,Sobeys ON - SG,8,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-yxwa6,Grocery: Refrigerated & Frozen focus
+1,Costco ATL,4,CA,storeLists-GroceryRefrigeratedFrozenfocus-2140-zglda,Grocery: Refrigerated & Frozen focus
+1,Dollarama ATL,4,CA,storeLists-GroceryShelfStablefocus-2139-1p850,Grocery: Shelf-Stable focus
+1,Federated Co-op,4,CA,storeLists-GroceryShelfStablefocus-2139-86dmy,Grocery: Shelf-Stable focus
+1,Dominion,4,CA,storeLists-GroceryShelfStablefocus-2139-ayn7s,Grocery: Shelf-Stable focus
+1,Foodland ON,4,CA,storeLists-GroceryShelfStablefocus-2139-be94v,Grocery: Shelf-Stable focus
+1,Giant Tiger WEST,4,CA,storeLists-GroceryShelfStablefocus-2139-fmbbi,Grocery: Shelf-Stable focus
+1,Giant Tiger ATL,4,CA,storeLists-GroceryShelfStablefocus-2139-g81lk,Grocery: Shelf-Stable focus
+1,Food Basics,4,CA,storeLists-GroceryShelfStablefocus-2139-goonf,Grocery: Shelf-Stable focus
+1,Dollarama ON,4,CA,storeLists-GroceryShelfStablefocus-2139-gtnam,Grocery: Shelf-Stable focus
+1,Giant Tiger ON,4,CA,storeLists-GroceryShelfStablefocus-2139-hg3so,Grocery: Shelf-Stable focus
+2,Independent (YIG) ON,8,CA,storeLists-GroceryShelfStablefocus-2139-hpl05,Grocery: Shelf-Stable focus
+1,Fortinos,4,CA,storeLists-GroceryShelfStablefocus-2139-m5h6n,Grocery: Shelf-Stable focus
+1,Dollarama QC,4,CA,storeLists-GroceryShelfStablefocus-2139-mcmox,Grocery: Shelf-Stable focus
+1,Dollarama WEST,4,CA,storeLists-GroceryShelfStablefocus-2139-mpynp,Grocery: Shelf-Stable focus
+1,Giant Tiger QC,4,CA,storeLists-GroceryShelfStablefocus-2139-rh6qo,Grocery: Shelf-Stable focus
+2,IGA Extra QC,8,CA,storeLists-GroceryShelfStablefocus-2139-t4g4m,Grocery: Shelf-Stable focus
+1,Fresh Co. WEST,4,CA,storeLists-GroceryShelfStablefocus-2139-to6jq,Grocery: Shelf-Stable focus
+1,Farm Boy,4,CA,storeLists-GroceryShelfStablefocus-2139-vcods,Grocery: Shelf-Stable focus
+1,Calgary Co-op,4,CA,storeLists-GroceryShelfStablefocus-2139-wan8c,Grocery: Shelf-Stable focus
+1,Fresh Co. ON,4,CA,storeLists-GroceryShelfStablefocus-2139-y1anw,Grocery: Shelf-Stable focus
+2,Real Canadian Superstore ON,8,CA,storeLists-GroceryShelfStablefocus-2140-2nb0f,Grocery: Shelf-Stable focus
+2,Loblaws,8,CA,storeLists-GroceryShelfStablefocus-2140-3gl3j,Grocery: Shelf-Stable focus
+1,London Drugs,4,CA,storeLists-GroceryShelfStablefocus-2140-3njrl,Grocery: Shelf-Stable focus
+2,Metro ON,8,CA,storeLists-GroceryShelfStablefocus-2140-4w4ki,Grocery: Shelf-Stable focus
+2,Nofrills ON,8,CA,storeLists-GroceryShelfStablefocus-2140-50y90,Grocery: Shelf-Stable focus
+2,Metro Plus QC,8,CA,storeLists-GroceryShelfStablefocus-2140-5gecg,Grocery: Shelf-Stable focus
+2,Nofrills WEST,8,CA,storeLists-GroceryShelfStablefocus-2140-8jizg,Grocery: Shelf-Stable focus
+1,Shoppers Drug Mart  ATL,4,CA,storeLists-GroceryShelfStablefocus-2140-9k8n9,Grocery: Shelf-Stable focus
+2,Super C,8,CA,storeLists-GroceryShelfStablefocus-2140-awz5a,Grocery: Shelf-Stable focus
+1,Zehrs,4,CA,storeLists-GroceryShelfStablefocus-2140-d8h53,Grocery: Shelf-Stable focus
+3,Walmart Supercentre ON,12,CA,storeLists-GroceryShelfStablefocus-2140-esw9a,Grocery: Shelf-Stable focus
+1,Thrifty Foods,4,CA,storeLists-GroceryShelfStablefocus-2140-etf48,Grocery: Shelf-Stable focus
+1,Shoppers Drug Mart  WEST,4,CA,storeLists-GroceryShelfStablefocus-2140-f9pd4,Grocery: Shelf-Stable focus
+2,Independent (YIG) WEST,8,CA,storeLists-GroceryShelfStablefocus-2140-htfa5,Grocery: Shelf-Stable focus
+2,Save On Foods,8,CA,storeLists-GroceryShelfStablefocus-2140-ieo5c,Grocery: Shelf-Stable focus
+2,Sobeys WEST,8,CA,storeLists-GroceryShelfStablefocus-2140-ig5qr,Grocery: Shelf-Stable focus
+1,Longo's,4,CA,storeLists-GroceryShelfStablefocus-2140-jihly,Grocery: Shelf-Stable focus
+1,Provigo,4,CA,storeLists-GroceryShelfStablefocus-2140-jw19d,Grocery: Shelf-Stable focus
+2,Sobeys ATL,8,CA,storeLists-GroceryShelfStablefocus-2140-mcugx,Grocery: Shelf-Stable focus
+2,Walmart Supercentre WEST,8,CA,storeLists-GroceryShelfStablefocus-2140-mdm27,Grocery: Shelf-Stable focus
+1,Nofrills ATL,4,CA,storeLists-GroceryShelfStablefocus-2140-nb2xf,Grocery: Shelf-Stable focus
+1,Shoppers Drug Mart  QC,4,CA,storeLists-GroceryShelfStablefocus-2140-ng24f,Grocery: Shelf-Stable focus
+2,Sobeys ON,8,CA,storeLists-GroceryShelfStablefocus-2140-nvglr,Grocery: Shelf-Stable focus
+2,Safeway,8,CA,storeLists-GroceryShelfStablefocus-2140-oix10,Grocery: Shelf-Stable focus
+2,Real Canadian Superstore WEST,8,CA,storeLists-GroceryShelfStablefocus-2140-oqkn7,Grocery: Shelf-Stable focus
+2,Walmart Supercentre ATL,8,CA,storeLists-GroceryShelfStablefocus-2140-p5djj,Grocery: Shelf-Stable focus
+1,Shoppers Drug Mart  ON,4,CA,storeLists-GroceryShelfStablefocus-2140-szqko,Grocery: Shelf-Stable focus
+2,Walmart Supercentre QC,8,CA,storeLists-GroceryShelfStablefocus-2140-vel3e,Grocery: Shelf-Stable focus
+2,Maxi,8,CA,storeLists-GroceryShelfStablefocus-2140-wgq08,Grocery: Shelf-Stable focus
+2,Shoppers Drug Mart  ATL,8,CA,storeLists-HealthBeauty-2139-0205u,Health & Beauty
+1,Familiprix,4,CA,storeLists-HealthBeauty-2139-1exzs,Health & Beauty
+2,Sobeys ON,8,CA,storeLists-HealthBeauty-2139-280y5,Health & Beauty
+1,Nofrills WEST,4,CA,storeLists-HealthBeauty-2139-2gnp1,Health & Beauty
+3,Real Canadian Superstore ON,10,CA,storeLists-HealthBeauty-2139-45egd,Health & Beauty
+3,Shoppers Drug Mart  ON,12,CA,storeLists-HealthBeauty-2139-4atw8,Health & Beauty
+1,Fresh Co. WEST,4,CA,storeLists-HealthBeauty-2139-5t5dq,Health & Beauty
+2,Rexall WEST,8,CA,storeLists-HealthBeauty-2139-86bt5,Health & Beauty
+1,Dominion,4,CA,storeLists-HealthBeauty-2139-8ca2m,Health & Beauty
+2,Uniprix,8,CA,storeLists-HealthBeauty-2139-ciruk,Health & Beauty
+2,Rexall ON,8,CA,storeLists-HealthBeauty-2139-d22vf,Health & Beauty
+2,Sephora,8,CA,storeLists-HealthBeauty-2139-hvuk5,Health & Beauty
+1,Super C,4,CA,storeLists-HealthBeauty-2139-i8o9a,Health & Beauty
+1,Maxi,4,CA,storeLists-HealthBeauty-2139-iv73b,Health & Beauty
+4,Jean Coutu,16,CA,storeLists-HealthBeauty-2139-jn12i,Health & Beauty
+2,Sobeys ATL,8,CA,storeLists-HealthBeauty-2139-kcnc6,Health & Beauty
+1,Food Basics,4,CA,storeLists-HealthBeauty-2139-lidvh,Health & Beauty
+2,Sobeys WEST,8,CA,storeLists-HealthBeauty-2139-ljzx3,Health & Beauty
+2,Save On Foods,8,CA,storeLists-HealthBeauty-2139-lqlfq,Health & Beauty
+6,Walmart ON,24,CA,storeLists-HealthBeauty-2139-mqmtn,Health & Beauty
+4,Shoppers Drug Mart  WEST,16,CA,storeLists-HealthBeauty-2139-na3jd,Health & Beauty
+1,Metro ON,4,CA,storeLists-HealthBeauty-2139-nelat,Health & Beauty
+1,Brunet,4,CA,storeLists-HealthBeauty-2139-o0k7o,Health & Beauty
+4,Walmart WEST,16,CA,storeLists-HealthBeauty-2139-pah71,Health & Beauty
+1,Fresh Co. ON,4,CA,storeLists-HealthBeauty-2139-pfbql,Health & Beauty
+2,Shoppers Drug Mart  QC,8,CA,storeLists-HealthBeauty-2139-rw2zv,Health & Beauty
+3,Real Canadian Superstore WEST,10,CA,storeLists-HealthBeauty-2139-s5jkv,Health & Beauty
+4,Walmart QC,16,CA,storeLists-HealthBeauty-2139-scc75,Health & Beauty
+2,Loblaws,8,CA,storeLists-HealthBeauty-2139-utoa6,Health & Beauty
+2,Lawtons,8,CA,storeLists-HealthBeauty-2139-vtmru,Health & Beauty
+3,Walmart ATL,12,CA,storeLists-HealthBeauty-2139-vuf5l,Health & Beauty
+2,London Drugs,8,CA,storeLists-HealthBeauty-2139-z4cbo,Health & Beauty
+1,Nofrills ON,4,CA,storeLists-HealthBeauty-2139-zjkqr,Health & Beauty
+10,Walgreens,40,US,storeLists-HealthWellnessPersonalCare-203-3ozpq,Health & Wellness/Personal Care
+10,Costco,40,US,storeLists-HealthWellnessPersonalCare-203-47lpj,Health & Wellness/Personal Care
+10,Target,40,US,storeLists-HealthWellnessPersonalCare-203-61otx,Health & Wellness/Personal Care
+7,Albertsons (all banners),28,US,storeLists-HealthWellnessPersonalCare-203-7bg4o,Health & Wellness/Personal Care
+6,Ahold,24,US,storeLists-HealthWellnessPersonalCare-203-857yz,Health & Wellness/Personal Care
+2,Dollar General,8,US,storeLists-HealthWellnessPersonalCare-203-8wftk,Health & Wellness/Personal Care
+2,Publix,8,US,storeLists-HealthWellnessPersonalCare-203-fvurf,Health & Wellness/Personal Care
+25,Walmart,100,US,storeLists-HealthWellnessPersonalCare-203-fweed,Health & Wellness/Personal Care
+2,HEB,8,US,storeLists-HealthWellnessPersonalCare-203-lc1j2,Health & Wellness/Personal Care
+10,CVS,40,US,storeLists-HealthWellnessPersonalCare-203-ob3lw,Health & Wellness/Personal Care
+6,Sam's Club,24,US,storeLists-HealthWellnessPersonalCare-203-to7kn,Health & Wellness/Personal Care
+2,Family Dollar,8,US,storeLists-HealthWellnessPersonalCare-203-wz900,Health & Wellness/Personal Care
+8,Kroger,32,US,storeLists-HealthWellnessPersonalCare-203-y0lse,Health & Wellness/Personal Care
+10,Sam's Club,40,US,storeLists-HomeGardenTools-203-0n0d7,"Home, Garden, & Tools"
+10,Ace,40,US,storeLists-HomeGardenTools-203-1iu8y,"Home, Garden, & Tools"
+15,Walmart,60,US,storeLists-HomeGardenTools-203-e881z,"Home, Garden, & Tools"
+20,Lowes,80,US,storeLists-HomeGardenTools-203-i619s,"Home, Garden, & Tools"
+15,Target,60,US,storeLists-HomeGardenTools-203-qn64p,"Home, Garden, & Tools"
+20,Home Depot,80,US,storeLists-HomeGardenTools-203-v924k,"Home, Garden, & Tools"
+10,Costco,40,US,storeLists-HomeGardenTools-203-vye0m,"Home, Garden, & Tools"
+4,Costco,16,US,storeLists-LuxuryBeauty-203-19jzv,Luxury Beauty
+6,Belk,24,US,storeLists-LuxuryBeauty-203-1pg4x,Luxury Beauty
+3,Neiman Marcus,12,US,storeLists-LuxuryBeauty-203-2jya5,Luxury Beauty
+20,Sephora,80,US,storeLists-LuxuryBeauty-203-9spzb,Luxury Beauty
+4,Walmart,16,US,storeLists-LuxuryBeauty-203-ahsy3,Luxury Beauty
+3,Nordstrom,12,US,storeLists-LuxuryBeauty-203-cadxk,Luxury Beauty
+3,Saks 5th Ave,12,US,storeLists-LuxuryBeauty-203-cxubo,Luxury Beauty
+6,Dillard's,24,US,storeLists-LuxuryBeauty-203-gbabg,Luxury Beauty
+4,Sam's Club,16,US,storeLists-LuxuryBeauty-203-gk867,Luxury Beauty
+20,Ulta,80,US,storeLists-LuxuryBeauty-203-iu38c,Luxury Beauty
+4,Target,16,US,storeLists-LuxuryBeauty-203-l79p4,Luxury Beauty
+12,Macy's,48,US,storeLists-LuxuryBeauty-203-vind6,Luxury Beauty
+4,CVS,16,US,storeLists-LuxuryBeauty-203-wgozu,Luxury Beauty
+4,Walgreens,16,US,storeLists-LuxuryBeauty-203-xqwu8,Luxury Beauty
+3,Bloomingdales,12,US,storeLists-LuxuryBeauty-203-z08sd,Luxury Beauty
+5,Costco,20,US,storeLists-MassBeauty-203-0z8mw,Mass Beauty
+10,Sephora,40,US,storeLists-MassBeauty-203-1qpkw,Mass Beauty
+5,Sam's Club,20,US,storeLists-MassBeauty-203-2hpmy,Mass Beauty
+10,Sally's,40,US,storeLists-MassBeauty-203-3c2hr,Mass Beauty
+10,Ulta,40,US,storeLists-MassBeauty-203-74rlg,Mass Beauty
+5,Kroger,20,US,storeLists-MassBeauty-203-7zpqz,Mass Beauty
+15,Target,60,US,storeLists-MassBeauty-203-fxsio,Mass Beauty
+5,Albertsons (all banners),20,US,storeLists-MassBeauty-203-pfctb,Mass Beauty
+10,CVS,40,US,storeLists-MassBeauty-203-w2dbd,Mass Beauty
+15,Walmart,60,US,storeLists-MassBeauty-203-xct9e,Mass Beauty
+10,Walgreens,40,US,storeLists-MassBeauty-203-z5oti,Mass Beauty
+8,Sam's Club,32,MX,storeLists-MexicoStandardMix-200-4oin0,Mexico - Standard Mix
+24,Walmart Bodega Aurrera,96,MX,storeLists-MexicoStandardMix-200-7eeth,Mexico - Standard Mix
+14,Walmart Supercenter,56,MX,storeLists-MexicoStandardMix-200-cj3aj,Mexico - Standard Mix
+5,Walmart Express,20,MX,storeLists-MexicoStandardMix-200-zzeo1,Mexico - Standard Mix
+5,Soriana Super,20,MX,storeLists-MexicoStandardMix-201-0cudx,Mexico - Standard Mix
+8,Soriana Mercado,32,MX,storeLists-MexicoStandardMix-201-38a9h,Mexico - Standard Mix
+8,Chedraui,32,MX,storeLists-MexicoStandardMix-201-7t1xg,Mexico - Standard Mix
+3,HEB,12,MX,storeLists-MexicoStandardMix-201-aqkx3,Mexico - Standard Mix
+1,La Comer City Market,4,MX,storeLists-MexicoStandardMix-201-boi5f,Mexico - Standard Mix
+2,La Comer,8,MX,storeLists-MexicoStandardMix-201-ohgrh,Mexico - Standard Mix
+1,Chedraui Selecto,4,MX,storeLists-MexicoStandardMix-201-olsxq,Mexico - Standard Mix
+18,Soriana Hiper,72,MX,storeLists-MexicoStandardMix-201-op07o,Mexico - Standard Mix
+2,Costco,8,MX,storeLists-MexicoStandardMix-201-u27oj,Mexico - Standard Mix
+1,La Comer Fresko,4,MX,storeLists-MexicoStandardMix-201-xy7nj,Mexico - Standard Mix
+30,Sprouts,120,US,storeLists-Natural-203-gaizf,Natural
+9,Natural Grocers,36,US,storeLists-Natural-203-jd1ji,Natural
+1,PCC Community Markets,4,US,storeLists-Natural-203-n8pf1,Natural
+50,Whole Foods,200,US,storeLists-Natural-203-nfo3u,Natural
+10,Fresh Thyme Market,40,US,storeLists-Natural-203-u7nf1,Natural
+15,Staples,60,US,storeLists-OfficeComputer-203-22uwi,Office & Computer
+10,Target,40,US,storeLists-OfficeComputer-203-85147,Office & Computer
+15,Walmart,60,US,storeLists-OfficeComputer-203-dhb5p,Office & Computer
+5,Micro Center,20,US,storeLists-OfficeComputer-203-is4r6,Office & Computer
+10,Sam's Club,40,US,storeLists-OfficeComputer-203-p0on4,Office & Computer
+20,Best Buy,80,US,storeLists-OfficeComputer-203-p2cox,Office & Computer
+15,Office Depot,60,US,storeLists-OfficeComputer-203-un80d,Office & Computer
+10,Costco,40,US,storeLists-OfficeComputer-203-wyc9p,Office & Computer
+2,Costco,8,CA,bT641z8CvRceXFeDYaIM,Pet
+2,Family Dollar,8,US,storeLists-Pet-203-7u8vf,Pet
+2,CVS,8,US,storeLists-Pet-203-8d1cf,Pet
+8,Sam's Club,32,US,storeLists-Pet-203-97cxy,Pet
+2,Walgreens,8,US,storeLists-Pet-203-asfuf,Pet
+8,Kroger,32,US,storeLists-Pet-203-d33uz,Pet
+2,Publix,8,US,storeLists-Pet-203-f0uwl,Pet
+10,PetSmart,40,US,storeLists-Pet-203-hxsw8,Pet
+7,Ahold,28,US,storeLists-Pet-203-ii5x2,Pet
+8,Target,32,US,storeLists-Pet-203-jb7qx,Pet
+7,Albertsons (all banners),28,US,storeLists-Pet-203-kcyju,Pet
+12,Costco,48,US,storeLists-Pet-203-ly3c8,Pet
+20,Walmart,80,US,storeLists-Pet-203-mp4pn,Pet
+8,Petco,32,US,storeLists-Pet-203-sxfai,Pet
+2,Dollar General,8,US,storeLists-Pet-203-xybvo,Pet
+2,HEB,8,US,storeLists-Pet-203-zgkrk,Pet
+1,Fresh Co. ON,4,CA,storeLists-Pet-204-0mhzu,Pet
+1,Dominion,4,CA,storeLists-Pet-204-2z9je,Pet
+2,Loblaws,8,CA,storeLists-Pet-204-37kl8,Pet
+2.5,Walmart QC,10,CA,storeLists-Pet-204-5tvp5,Pet
+2,Save On Foods,8,CA,storeLists-Pet-204-6orve,Pet
+2.5,Walmart ATL,10,CA,storeLists-Pet-204-79bye,Pet
+2,Nofrills WEST,8,CA,storeLists-Pet-204-7a4ac,Pet
+1,IGA Extra QC,4,CA,storeLists-Pet-204-90jps,Pet
+2,Sobeys ATL,8,CA,storeLists-Pet-204-9elmn,Pet
+1,Buy-Low Foods,4,CA,storeLists-Pet-204-9ieoq,Pet
+4,PetSmart Canada,16,CA,storeLists-Pet-204-ac5ex,Pet
+1,Nofrills ATL,4,CA,storeLists-Pet-204-ajmof,Pet
+2,Canadian Tire ON,8,CA,storeLists-Pet-204-ar724,Pet
+1,AG Foods,4,CA,storeLists-Pet-204-chzwb,Pet
+2,Metro Plus QC,8,CA,storeLists-Pet-204-d0dy4,Pet
+1,Calgary Co-op,4,CA,storeLists-Pet-204-hlkhz,Pet
+4,Global Pet Foods,16,CA,storeLists-Pet-204-hws51,Pet
+2,Nofrills ON,8,CA,storeLists-Pet-204-irzdz,Pet
+2,Sobeys ON,8,CA,storeLists-Pet-204-j0i6j,Pet
+2.5,Walmart WEST,10,CA,storeLists-Pet-204-jafuj,Pet
+2,Canadian Tire WEST,8,CA,storeLists-Pet-204-kawxw,Pet
+1,Provigo,4,CA,storeLists-Pet-204-kx4nh,Pet
+1,Nesters Food Market,4,CA,storeLists-Pet-204-kyjkr,Pet
+2,Canadian Tire QC,8,CA,storeLists-Pet-204-n7lc0,Pet
+1,Fresh Co. WEST,4,CA,storeLists-Pet-204-pk2tw,Pet
+1,Zehrs,4,CA,storeLists-Pet-204-pzwx9,Pet
+2,Metro ON,8,CA,storeLists-Pet-204-u73lv,Pet
+2,Super C,8,CA,storeLists-Pet-204-uioqi,Pet
+2,Maxi,8,CA,storeLists-Pet-204-va6zq,Pet
+2,Sobeys WEST,8,CA,storeLists-Pet-204-x0ox6,Pet
+2,Federated Co-op,8,CA,storeLists-Pet-204-xwe0p,Pet
+2,Safeway,8,CA,storeLists-Pet-204-yjcob,Pet
+2,Canadian Tire ATL,8,CA,storeLists-Pet-204-yz032,Pet
+3.5,Walmart ON,14,CA,storeLists-Pet-204-zb5up,Pet
+4,Pet Valu,16,CA,storeLists-Pet-204-zbf12,Pet
+15,Kroger,60,US,storeLists-Produce-203-2oilr,Produce
+5,Costco,20,US,storeLists-Produce-203-9nw2f,Produce
+10,Ahold (all banners),40,US,storeLists-Produce-203-bg99l,Produce
+6,Publix,24,US,storeLists-Produce-203-iibq2,Produce
+15,Walmart,60,US,storeLists-Produce-203-k142o,Produce
+15,Albertsons (all banners),60,US,storeLists-Produce-203-mrigc,Produce
+15,Target,60,US,storeLists-Produce-203-ylzj7,Produce
+4,Meijer,16,US,storeLists-Produce-204-3l6h7,Produce
+4,ShopRite,16,US,storeLists-Produce-204-iat3d,Produce
+3,Hy-Vee,12,US,storeLists-Produce-204-s6nvh,Produce
+3,Ingles,12,US,storeLists-Produce-204-wto6n,Produce
+2,HEB,8,US,storeLists-Produce-204-x8w4a,Produce
+3,Wegmans,12,US,storeLists-Produce-204-xkxgm,Produce
+25,Target,100,US,storeLists-SchoolOfficeArt-204-22t1u,"School, Office, & Art"
+10,Costco,40,US,storeLists-SchoolOfficeArt-204-4cfgg,"School, Office, & Art"
+15,Staples,60,US,storeLists-SchoolOfficeArt-204-60zk8,"School, Office, & Art"
+15,Office Depot,60,US,storeLists-SchoolOfficeArt-204-hw6ml,"School, Office, & Art"
+10,Sam's Club,40,US,storeLists-SchoolOfficeArt-204-i6dtq,"School, Office, & Art"
+25,Walmart,100,US,storeLists-SchoolOfficeArt-204-kpqhk,"School, Office, & Art"
+1,Game,4,ZA,storeLists-SouthAfricaStandardMix-201-21729,South Africa - Standard Mix
+10,Spar,40,ZA,storeLists-SouthAfricaStandardMix-201-cqe3w,South Africa - Standard Mix
+2,Food Lovers,8,ZA,storeLists-SouthAfricaStandardMix-201-j87kh,South Africa - Standard Mix
+10,Checker's,40,ZA,storeLists-SouthAfricaStandardMix-201-kg18a,South Africa - Standard Mix
+5,Woolworths,20,ZA,storeLists-SouthAfricaStandardMix-201-mp4re,South Africa - Standard Mix
+1,OK Foods,4,ZA,storeLists-SouthAfricaStandardMix-201-nn49s,South Africa - Standard Mix
+10,Pick n Pay,40,ZA,storeLists-SouthAfricaStandardMix-201-p74o4,South Africa - Standard Mix
+1,Makro,4,ZA,storeLists-SouthAfricaStandardMix-201-ud80z,South Africa - Standard Mix
+10,Shoprite,40,ZA,storeLists-SouthAfricaStandardMix-201-uj02d,South Africa - Standard Mix
+2,Alcampo Hyper,8,ES,storeLists-SpainStandardMix-201-55uvm,Spain - Standard Mix
+7,Carrefour Hyper,28,ES,storeLists-SpainStandardMix-201-ahpuq,Spain - Standard Mix
+10,Dia Market,40,ES,storeLists-SpainStandardMix-201-bgtwh,Spain - Standard Mix
+3,AHORRAMAS,12,ES,storeLists-SpainStandardMix-201-cfhry,Spain - Standard Mix
+1,Eroski Hyper,4,ES,storeLists-SpainStandardMix-201-h1tt6,Spain - Standard Mix
+3,SUPERMERCADOS EL CORTE INGLES,12,ES,storeLists-SpainStandardMix-201-i5pql,Spain - Standard Mix
+2,FAMILY CASH,8,ES,storeLists-SpainStandardMix-201-ixudc,Spain - Standard Mix
+5,Carrefour Market,20,ES,storeLists-SpainStandardMix-201-kpmdx,Spain - Standard Mix
+2,Hipercor,8,ES,storeLists-SpainStandardMix-201-ljgg9,Spain - Standard Mix
+5,Eroski City,20,ES,storeLists-SpainStandardMix-201-lmzxi,Spain - Standard Mix
+3,Carrefour Express,12,ES,storeLists-SpainStandardMix-201-wtn6h,Spain - Standard Mix
+7,Mercadona,28,ES,storeLists-SpainStandardMix-201-xwer6,Spain - Standard Mix
+5,Costco,20,US,storeLists-SpecialOccasion-204-60p1h,Special Occasion
+20,Walmart,80,US,storeLists-SpecialOccasion-204-7xyc9,Special Occasion
+5,Sam's Club,20,US,storeLists-SpecialOccasion-204-b8zli,Special Occasion
+25,Party City,100,US,storeLists-SpecialOccasion-204-fymj4,Special Occasion
+5,Dollar General,20,US,storeLists-SpecialOccasion-204-i1581,Special Occasion
+5,CVS,20,US,storeLists-SpecialOccasion-204-ic0oa,Special Occasion
+5,Walgreens,20,US,storeLists-SpecialOccasion-204-mpy2b,Special Occasion
+5,Family Dollar,20,US,storeLists-SpecialOccasion-204-mqulq,Special Occasion
+5,Kroger,20,US,storeLists-SpecialOccasion-204-nue01,Special Occasion
+15,Target,60,US,storeLists-SpecialOccasion-204-uuhi5,Special Occasion
+5,Albertsons (all banners),20,US,storeLists-SpecialOccasion-204-zumkx,Special Occasion
+15,Target,60,US,storeLists-SportsOutdoors-204-3rfju,Sports & Outdoors
+10,Costco,40,US,storeLists-SportsOutdoors-204-b7ph6,Sports & Outdoors
+10,Bass Pro Shop/Cabela's,40,US,storeLists-SportsOutdoors-204-dmir7,Sports & Outdoors
+10,Academy,40,US,storeLists-SportsOutdoors-204-gdfj3,Sports & Outdoors
+25,Dick's,100,US,storeLists-SportsOutdoors-204-i9zcy,Sports & Outdoors
+5,Sam's Club,20,US,storeLists-SportsOutdoors-204-wwshe,Sports & Outdoors
+25,Walmart,100,US,storeLists-SportsOutdoors-204-xmlwh,Sports & Outdoors
+5,Dollar General,20,US,storeLists-StandardHousehold-204-0rp5l,Standard (Household)
+15,Target,60,US,storeLists-StandardHousehold-204-1cmzn,Standard (Household)
+2,Family Dollar,8,US,storeLists-StandardHousehold-204-2f0t1,Standard (Household)
+5,Sam's Club,20,US,storeLists-StandardHousehold-204-42gl1,Standard (Household)
+5,CVS,20,US,storeLists-StandardHousehold-204-46kmh,Standard (Household)
+15,Walmart,60,US,storeLists-StandardHousehold-204-5effw,Standard (Household)
+10,Albertsons (all banners),40,US,storeLists-StandardHousehold-204-bwflo,Standard (Household)
+2,BJ's,8,US,storeLists-StandardHousehold-204-c5k7x,Standard (Household)
+4,Publix,16,US,storeLists-StandardHousehold-204-eb0ye,Standard (Household)
+10,Ahold,40,US,storeLists-StandardHousehold-204-jrih1,Standard (Household)
+5,Walgreens,20,US,storeLists-StandardHousehold-204-ln8nj,Standard (Household)
+2,HEB,8,US,storeLists-StandardHousehold-204-nehf9,Standard (Household)
+10,Costco,40,US,storeLists-StandardHousehold-204-qykpm,Standard (Household)
+10,Kroger,40,US,storeLists-StandardHousehold-204-sa30g,Standard (Household)
+1,Dollarama ON,4,CA,storeLists-StandardHousehold-205-08sp1,Standard (Household)
+1,Independent (YIG) WEST,4,CA,storeLists-StandardHousehold-205-0a3mq,Standard (Household)
+1,Dominion,4,CA,storeLists-StandardHousehold-205-0d76v,Standard (Household)
+2,Metro Plus QC,8,CA,storeLists-StandardHousehold-205-0hsgy,Standard (Household)
+1,Shoppers Drug Mart  QC,4,CA,storeLists-StandardHousehold-205-0j1jt,Standard (Household)
+1,Dollarama ATL,4,CA,storeLists-StandardHousehold-205-1741v,Standard (Household)
+1,Giant Tiger QC,4,CA,storeLists-StandardHousehold-205-1nvxb,Standard (Household)
+2,IGA Extra QC,8,CA,storeLists-StandardHousehold-205-4650l,Standard (Household)
+1,Giant Tiger ATL,4,CA,storeLists-StandardHousehold-205-5znno,Standard (Household)
+2,Real Canadian Superstore ON,8,CA,storeLists-StandardHousehold-205-7fhgf,Standard (Household)
+2,Real Canadian Superstore WEST,8,CA,storeLists-StandardHousehold-205-98a7h,Standard (Household)
+1,Dollarama WEST,4,CA,storeLists-StandardHousehold-205-b3hci,Standard (Household)
+2,Loblaws,8,CA,storeLists-StandardHousehold-205-d6xdx,Standard (Household)
+1,Shoppers Drug Mart ATL,4,CA,storeLists-StandardHousehold-205-dm0sr,Standard (Household)
+2,Maxi,8,CA,storeLists-StandardHousehold-205-evwdz,Standard (Household)
+1,Calgary Co-op,4,CA,storeLists-StandardHousehold-205-ez3bl,Standard (Household)
+1,Longo's,4,CA,storeLists-StandardHousehold-205-gep82,Standard (Household)
+1,Nofrills ATL,4,CA,storeLists-StandardHousehold-205-juobb,Standard (Household)
+1,Shoppers Drug Mart  ON,4,CA,storeLists-StandardHousehold-205-kl3pi,Standard (Household)
+1,Canadian Tire ATL,4,CA,storeLists-StandardHousehold-205-kx6fv,Standard (Household)
+1,Giant Tiger WEST,4,CA,storeLists-StandardHousehold-205-n0jhs,Standard (Household)
+2,Real Atlantic Superstore,8,CA,storeLists-StandardHousehold-205-nwer9,Standard (Household)
+1,Fresh Co. WEST,4,CA,storeLists-StandardHousehold-205-ohd2o,Standard (Household)
+1,Fresh Co. ON,4,CA,storeLists-StandardHousehold-205-p0x7w,Standard (Household)
+1,Foodland ON,4,CA,storeLists-StandardHousehold-205-p2j0c,Standard (Household)
+1,Provigo,4,CA,storeLists-StandardHousehold-205-piugo,Standard (Household)
+1,Dollarama QC,4,CA,storeLists-StandardHousehold-205-q134i,Standard (Household)
+2,Nofrills ON,8,CA,storeLists-StandardHousehold-205-qg1xv,Standard (Household)
+1,Canadian Tire QC,4,CA,storeLists-StandardHousehold-205-qvqoj,Standard (Household)
+2,Independent (YIG) ON,8,CA,storeLists-StandardHousehold-205-r1a0d,Standard (Household)
+1,Giant Tiger ON,4,CA,storeLists-StandardHousehold-205-rt7uc,Standard (Household)
+1,Canadian Tire ON,4,CA,storeLists-StandardHousehold-205-s99xt,Standard (Household)
+2,Metro ON,8,CA,storeLists-StandardHousehold-205-tywf0,Standard (Household)
+1,Federated Co-op,4,CA,storeLists-StandardHousehold-205-uepa9,Standard (Household)
+1,Food Basics,4,CA,storeLists-StandardHousehold-205-w0l00,Standard (Household)
+1,Canadian Tire WEST,4,CA,storeLists-StandardHousehold-205-w9dqq,Standard (Household)
+1,Save On Foods,4,CA,storeLists-StandardHousehold-205-we2t5,Standard (Household)
+2,Nofrills WEST,8,CA,storeLists-StandardHousehold-205-xam9f,Standard (Household)
+1,Fortinos,4,CA,storeLists-StandardHousehold-205-z3dn1,Standard (Household)
+2,Safeway,8,CA,storeLists-StandardHousehold-205-z7c4e,Standard (Household)
+2,Walmart ATL,8,CA,storeLists-StandardHousehold-2139-4c1ns,Standard (Household)
+1,Super C,4,CA,storeLists-StandardHousehold-2139-7qmrv,Standard (Household)
+2,Sobeys WEST,8,CA,storeLists-StandardHousehold-2139-968u0,Standard (Household)
+1,Thrifty Foods,4,CA,storeLists-StandardHousehold-2139-cnalc,Standard (Household)
+1,Shoppers Drug Mart  WEST,4,CA,storeLists-StandardHousehold-2139-do14q,Standard (Household)
+2,Sobeys ON,8,CA,storeLists-StandardHousehold-2139-k87vp,Standard (Household)
+2,Sobeys ATL,8,CA,storeLists-StandardHousehold-2139-muxix,Standard (Household)
+3,Walmart ON,12,CA,storeLists-StandardHousehold-2139-wz88q,Standard (Household)
+2,Walmart WEST,8,CA,storeLists-StandardHousehold-2139-x1zcl,Standard (Household)
+2,Walmart QC,8,CA,storeLists-StandardHousehold-2139-z6ph6,Standard (Household)
+5,Binny’s Beverage Depot,20,US,storeLists-1762190333428-lqm70e7,Standard Wine
+13.5,Kroger,52,US,storeLists-StandardWine-200-1f0s0,Standard Wine
+10,Total Wine & More,40,US,storeLists-StandardWine-200-33z9d,Standard Wine
+12,Walmart,48,US,storeLists-StandardWine-200-7vutf,Standard Wine
+3,"Spec’s Wines, Spirits & Finer Foods",12,US,storeLists-StandardWine-200-bzl0m,Standard Wine
+15,Costco,60,US,storeLists-StandardWine-200-ih83j,Standard Wine
+10,BenMo!,40,US,storeLists-StandardWine-200-ky3qw,Standard Wine
+5,Publix,20,US,storeLists-StandardWine-200-mtc9l,Standard Wine
+2,H-E-B,8,US,storeLists-StandardWine-200-p6w47,Standard Wine
+10,Albertsons,40,US,storeLists-StandardWine-200-p91li,Standard Wine
+7,ABC Fine Wine & Spirits,28,US,storeLists-StandardWine-200-qv3yr,Standard Wine
+5,Trader Joe's,20,US,storeLists-StandardWine-200-wo3mc,Standard Wine
+3,Aldi,12,US,storeLists-StandardWine-200-zxibj,Standard Wine
+6,Lidl,24,UK,storeLists-UKStandardMix-202-45p3s,UK - Standard Mix
+6,Boots,12,UK,storeLists-UKStandardMix-202-6i5lj,UK - Standard Mix
+10,Sainsbury’s,40,UK,storeLists-UKStandardMix-202-851oq,UK - Standard Mix
+6,Aldi,24,UK,storeLists-UKStandardMix-202-h8ebg,UK - Standard Mix
+5,Asda,20,UK,storeLists-UKStandardMix-202-i2mo9,UK - Standard Mix
+10,Tesco,40,UK,storeLists-UKStandardMix-202-lz9t8,UK - Standard Mix
+5,Waitrose,20,UK,storeLists-UKStandardMix-202-pxuwn,UK - Standard Mix
+5,Morrisons,20,UK,storeLists-UKStandardMix-202-s21aw,UK - Standard Mix
+1,Liquor Barn,4,US,storeLists-WineRegionalIndependentChains-198-jliz7,Wine - Regional/Independent Chains
+1,Payless Liquors,4,US,storeLists-WineRegionalIndependentChains-200-0ld0a,Wine - Regional/Independent Chains
+4,ABC Fine Wine & Spirits,16,US,storeLists-WineRegionalIndependentChains-200-0xmx0,Wine - Regional/Independent Chains
+4,Woodman's,16,US,storeLists-WineRegionalIndependentChains-200-77inm,Wine - Regional/Independent Chains
+4,Fareway,16,US,storeLists-WineRegionalIndependentChains-200-7977a,Wine - Regional/Independent Chains
+1,CAP-N-CORK,4,US,storeLists-WineRegionalIndependentChains-200-9aa4c,Wine - Regional/Independent Chains
+1,Macadoodles,4,US,storeLists-WineRegionalIndependentChains-200-9csjl,Wine - Regional/Independent Chains
+4,Twin Liquors,16,US,storeLists-WineRegionalIndependentChains-200-bd7vp,Wine - Regional/Independent Chains
+4,Binny's Beverage Depot,16,US,storeLists-WineRegionalIndependentChains-200-e8a8j,Wine - Regional/Independent Chains
+4,Cash Wise,16,US,storeLists-WineRegionalIndependentChains-200-g15jq,Wine - Regional/Independent Chains
+4,BIG RED LIQUORS,16,US,storeLists-WineRegionalIndependentChains-200-l2dol,Wine - Regional/Independent Chains
+4,"Spec's Wines, Spirits & Finer Foods",16,US,storeLists-WineRegionalIndependentChains-200-lbcqz,Wine - Regional/Independent Chains
+4,Buy-Rite Liquors,16,US,storeLists-WineRegionalIndependentChains-200-niyiw,Wine - Regional/Independent Chains
+4,Crown Liquors,16,US,storeLists-WineRegionalIndependentChains-200-prsfe,Wine - Regional/Independent Chains
+1,MGM Wine & Spirits,4,US,storeLists-WineRegionalIndependentChains-200-rxlyi,Wine - Regional/Independent Chains
+4,Lee's Discount Liquor,16,US,storeLists-WineRegionalIndependentChains-200-tlc59,Wine - Regional/Independent Chains
+1,Goody Goody Liquor,4,US,storeLists-WineRegionalIndependentChains-200-tzv85,Wine - Regional/Independent Chains

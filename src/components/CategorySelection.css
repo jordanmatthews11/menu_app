@@ -1,0 +1,297 @@
+.category-selection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.category-selection h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.search-results {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+}
+
+.categories-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.categories-table thead {
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  z-index: 10;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.categories-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.categories-table th:first-child {
+  width: 50px;
+}
+
+.categories-table th.col-name {
+  width: 200px;
+  min-width: 200px;
+}
+
+.categories-table th.col-department {
+  width: 150px;
+  min-width: 150px;
+}
+
+.categories-table th.col-brands {
+  width: 200px;
+  min-width: 200px;
+}
+
+.categories-table th.col-description {
+  width: 300px;
+  min-width: 300px;
+}
+
+.categories-table th.col-notes {
+  width: 150px;
+  min-width: 150px;
+}
+
+.categories-table th.col-countries {
+  width: 100px;
+  min-width: 100px;
+}
+
+.category-row {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-row:hover {
+  background-color: #f8f9fa;
+}
+
+.category-row.selected {
+  background-color: #e8f4f8;
+}
+
+.category-row.selected:hover {
+  background-color: #d4e8f0;
+}
+
+.category-row.even {
+  background-color: #fafafa;
+}
+
+.category-row.even.selected {
+  background-color: #e8f4f8;
+}
+
+.category-row.even:hover {
+  background-color: #f0f0f0;
+}
+
+.category-row td {
+  padding: 0.75rem 1rem;
+  color: #495057;
+  vertical-align: top;
+}
+
+.category-row td.col-name {
+  font-weight: 500;
+  color: #212529;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4a90e2;
+}
+
+.col-description {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.col-brands {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-style: italic;
+}
+
+.selection-summary {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  text-align: center;
+  color: #495057;
+}
+
+.selection-summary strong {
+  color: #4a90e2;
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #357abd;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+}
+
+.btn-primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d32f2f;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Scrollbar styling for webkit browsers */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 1200px) {
+  .category-selection {
+    padding: 1rem;
+  }
+  
+  .categories-table {
+    font-size: 0.85rem;
+  }
+  
+  .categories-table th,
+  .categories-table td {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .col-description {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    max-height: 400px;
+  }
+  
+  .categories-table th.col-description,
+  .categories-table th.col-notes {
+    display: none;
+  }
+  
+  .category-row td.col-description,
+  .category-row td.col-notes {
+    display: none;
+  }
+}
