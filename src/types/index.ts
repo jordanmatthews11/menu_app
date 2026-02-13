@@ -12,6 +12,23 @@ export interface Category {
   descriptions?: string[]; // Internal use for merging
 }
 
+/**
+ * Raw category document as stored in Firestore (one per category-country combo).
+ * The app groups these into Category objects (merged by name).
+ */
+export interface CategoryDoc {
+  id: string;
+  name: string;
+  country: string;
+  department: string;
+  subDepartment: string;
+  description: string;
+  exampleBrands: string;
+  notes: string;
+  number: string;
+  premium: boolean;
+}
+
 export interface StoreListRetailer {
   id: string;
   retailer: string;
@@ -20,6 +37,16 @@ export interface StoreListRetailer {
 }
 
 export interface StoreList {
+  name: string;
+  country: string;
+  retailers: StoreListRetailer[];
+}
+
+/**
+ * Store list document as stored in Firestore (one per list name + country).
+ */
+export interface StoreListDoc {
+  id: string;
   name: string;
   country: string;
   retailers: StoreListRetailer[];
@@ -60,4 +87,22 @@ export interface OrderEntry {
 export interface Retailer {
   id: string;
   name: string;
+}
+
+export interface AuthorizedUser {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export interface CustomCategoryCode {
+  id: string;
+  categoryCode: string;
+  customer: string;
+  category: string;
+  submittedBy: string;
+  notes: string;
+  jobIds: string;
+  codeType: string;
+  timestamp: string;
 }

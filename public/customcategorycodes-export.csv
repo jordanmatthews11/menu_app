@@ -1,0 +1,28 @@
+id,jobIds,notes,submittedBy,categoryCode,codeType,timestamp,customer,category
+customCategoryCodes-1760628212455-NE-sag3f,,,Chris Payton-Barba,US-M-121-PBNWBP,Custom,"10/13/2025, 11:47:44 AM",USA Pears / Pear Bureau Northwest,NE Oct Bartlett Pear Audit
+customCategoryCodes-1760628212455-Oct-voxng,,,Chris Payton-Barba,US-M-120-TJ-Rainier US-D-120-TJ-Rainier,Custom,"10/13/2025, 11:49:00 AM",Rainier Fruit,Oct Trader Joes Apple Audit
+customCategoryCodes-1760628212455-Shelf-4xqu8,,"added question codes to the job, shared the job and project with Bram@shelfgram, created the collection and QCs in Shelfgram. logging new codes for record keeping.",Chris Payton-Barba,"US-M-275-Welch3cats, US-D-275-Welch3cats",Custom,"10/2/2025, 1:29:07 PM",Welch's,"Shelf Stable Juice, Spreads, Refrigerated Juice"
+customCategoryCodes-1760628212454-Beer-ryumr,,,Jordan Matthews,CA-Molson-334,Custom,"10/2/2025, 8:37:51 AM",Molson Coors,Beer
+customCategoryCodes-1760628212455-Beer-9lb84,,,Jordan Matthews,CA-Molson-350,Custom,"10/2/2025, 8:38:54 AM",Molson Coors,Beer Alternatives
+customCategoryCodes-1760628212455-Nonalcoholic-glzu3,,,Jordan Matthews,CA-Molson-15,Custom,"10/2/2025, 8:39:22 AM",Molson Coors,Nonalcoholic Drinks
+customCategoryCodes-1760628212455-Laundry-0r33f,,,Jordan Matthews,PROPEL-M-70,Custom,"10/2/2025, 8:39:47 AM",Propel,Laundry Detergent
+customCategoryCodes-1760628212455-Dishwashing-11xv5,,,Jordan Matthews,PROPEL-M-211,Custom,"10/2/2025, 8:40:04 AM",Propel,Dishwashing Liquid
+customCategoryCodes-1760628212455-Cleaning-x4hov,,,Jordan Matthews,PROPEL-M-69,Custom,"10/2/2025, 8:40:59 AM",Propel,Cleaning Supplies
+customCategoryCodes-1760628212455-Baby-ie2sv,,,Jordan Matthews,PROPEL-M-379-RP,Custom,"10/2/2025, 8:41:23 AM",Propel,Baby Shampoo & Oil
+customCategoryCodes-1760628212455-Soap-4jriu,,,Jordan Matthews,PROPEL-M-711-RP,Custom,"10/2/2025, 8:41:41 AM",Propel,Soap
+customCategoryCodes-1760628212455-Cosmetics-y5j9b,,,Jordan Matthews,US-7-Pureology,Custom,"10/2/2025, 8:59:46 AM",Pureology,Cosmetics
+customCategoryCodes-1760628212452-Kenvue-bul7d,,,Jordan Matthews,US-M-359-KENVUE,Custom,"10/2/2025, 9:00:06 AM",Kenvue,Kenvue Custom
+customCategoryCodes-1760628212455-Purina-i9o5s,,,Jordan Matthews,US-Purina-M-4,Custom,"10/2/2025, 9:00:40 AM",Purina,Purina Dog Food Audit
+customcode-1762271045801,1611017,,Chris Payton-Barba,"US-M-536-RP-ERPetsmart US-D-536-RP-ERPetsmart ",Custom,2025-11-04T15:44:05.801Z,Earth Rated,Earth Rated Petsmart Endcap
+customcode-1763135508234,PID 1614578,Question Code and collection has been built in Storesight Question code has been attached to job in admin,Chris Payton-Barba,US-M-137-NFFCostcoT,Custom,2025-11-14T15:51:48.234Z,Nature Fresh,Dramas Costco Audit Nov
+customcode-1763417237600,,,Chris Payton-Barba,US-M-145-redbull711july US-D-145-redbull711july,Custom,2025-11-17T22:07:17.600Z,Redbull,Energy Drinks
+customcode-1763417296250,PID: 1549415,Question Code added and linked to admin,Chris Payton-Barba,US-M-145-redbull711july  US-D-145-redbull711july,Custom,2025-11-17T22:08:16.250Z,Red bull,Energy Drinks
+customcode-1763417337989,PID: 1403921,QC added and link to job in admin,Chris Payton-Barba,US-M-145-redbull711june.  US-d-145-redbull711june,Custom,2025-11-17T22:08:57.989Z,Redbull,Energy Drinks
+customcode-1763417379158,PID: 1068093,QC added and linked in admin,Chris Payton-Barba,US-M-145-redbull711May     US-d-145-redbull711May,Custom,2025-11-17T22:09:39.158Z,Redbull,Energy Drinks
+customcode-1763417416745,PID: 1393176,QC add and linked in admin,Chris Payton-Barba,US-M-145-redbull711APR       US-D-145-redbull711APR,Custom,2025-11-17T22:10:16.745Z,Redbull,Energy Drinks
+customcode-1763417499680,PID: 1549489,qc added and linked in admin,Chris Payton-Barba,US-M-145-redbullckjuly      US-D-145-redbullckjuly,Custom,2025-11-17T22:11:39.680Z,Redbull,Energy Drinks
+customcode-1763417527845,PID: 1567553,qc added and linked in admin,Chris Payton-Barba,US-M-145-redbullckAugust       US-D-145-redbullckaugust,Custom,2025-11-17T22:12:07.845Z,Redbull,Energy Drinks
+customcode-1765385917393,,,Justin Paslay,US-M-413-RP-MADEGOODQ4,Custom,2025-12-10T16:58:37.393Z,Riverside Naturals,MadeGood Q4 Audit
+customcode-1765385958668,,,Justin Paslay,US-D-413-RP-MADEGOODQ4,Custom,2025-12-10T16:59:18.669Z,Riverside Naturals,MadeGood Q4 Audit
+customcode-1768253611477,1600250,,Chris Payton-Barba,US-D-145-redbull711OCT US-M-145-redbull711OCT,Custom,2026-01-12T21:33:31.477Z,Redbull,Energy Drinks
+customcode-1768254133992,1567556,,Chris Payton-Barba,US-D-145-redbull711AUG US-M-145-redbull711AUG,Custom,2026-01-12T21:42:13.992Z,Redbull,Energy Drinks
