@@ -56,13 +56,22 @@ export const CategoryConfigPanel = ({
 
   const handleToggleBooster = (boosterId: string) => {
     const updated = { ...config };
-    if (updated.selectedBoosters.includes(boosterId)) {
+    const exists = updated.selectedBoosters.find((s) => s.boosterId === boosterId);
+    if (exists) {
       updated.selectedBoosters = updated.selectedBoosters.filter(
-        (id) => id !== boosterId
+        (s) => s.boosterId !== boosterId
       );
     } else {
-      updated.selectedBoosters = [...updated.selectedBoosters, boosterId];
+      updated.selectedBoosters = [...updated.selectedBoosters, { boosterId, monthlyQuota: 0 }];
     }
+    onChange(updated);
+  };
+
+  const handleUpdateBoosterQuota = (boosterId: string, monthlyQuota: number) => {
+    const updated = { ...config };
+    updated.selectedBoosters = updated.selectedBoosters.map((s) =>
+      s.boosterId === boosterId ? { ...s, monthlyQuota } : s
+    );
     onChange(updated);
   };
 
@@ -107,8 +116,9 @@ export const CategoryConfigPanel = ({
 
           <BoosterPicker
             boosters={countryBoosters}
-            selectedBoosterIds={config.selectedBoosters}
+            selectedBoosters={config.selectedBoosters}
             onToggleBooster={handleToggleBooster}
+            onUpdateBoosterQuota={handleUpdateBoosterQuota}
           />
 
           <div className="date-section">
@@ -155,7 +165,7 @@ export const CategoryConfigPanel = ({
                 onChange({ ...config, collectionNotes: e.target.value })
               }
               className="notes-textarea"
-              rows={3}
+              rows={2}
             />
           </div>
         </div>

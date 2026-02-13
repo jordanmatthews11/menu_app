@@ -8,7 +8,7 @@ import {
   writeBatch,
 } from 'firebase/firestore';
 import { db } from '../firebase';
-import type { CategoryDoc, StoreListDoc, StoreListRetailer, Booster, AuthorizedUser, CustomCategoryCode } from '../types';
+import type { CategoryDoc, StoreListDoc, StoreListRetailer, Booster, AuthorizedUser, CustomCategoryCode, SubmittedOrder } from '../types';
 
 // ============================
 // Categories
@@ -141,6 +141,52 @@ export async function updateCustomCode(id: string, data: Partial<Omit<CustomCate
 
 export async function deleteCustomCode(id: string): Promise<void> {
   await deleteDoc(doc(db, CUSTOM_CODES_COL, id));
+}
+
+// ============================
+// Submitted Orders
+// ============================
+
+const ORDERS_COL = 'submittedOrders';
+
+export async function submitOrder(data: Omit<SubmittedOrder, 'id'>): Promise<string> {
+  // Serialize Date objects in entries to ISO strings for Firestore
+  const serialized = {
+    ...data,
+    entries: data.entries.map((e) => ({
+      ...e,
+      startDate: e.startDate instanceof Date ? e.startDate.toISOString() : e.startDate,
+      endDate: e.endDate instanceof Date ? e.endDate.toISOString() : e.endDate,
+    })),
+  };
+  const ref = await addDoc(collection(db, ORDERS_COL), serialized);
+  return ref.id;
+}
+
+export async function fetchSubmittedOrders(): Promise<SubmittedOrder[]> {
+  const snap = await getDocs(collection(db, ORDERS_COL));
+  const orders = snap.docs.map((d) => {
+    const raw = d.data();
+    return {
+      id: d.id,
+      submittedBy: raw.submittedBy ?? '',
+      submittedByEmail: raw.submittedByEmail ?? '',
+      submittedAt: raw.submittedAt ?? '',
+      status: raw.status ?? 'submitted',
+      entries: (raw.entries ?? []).map((e: Record<string, unknown>) => ({
+        ...e,
+        startDate: new Date(e.startDate as string),
+        endDate: new Date(e.endDate as string),
+      })),
+    } as SubmittedOrder;
+  });
+  // Sort newest first
+  orders.sort((a, b) => new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime());
+  return orders;
+}
+
+export async function deleteSubmittedOrder(id: string): Promise<void> {
+  await deleteDoc(doc(db, ORDERS_COL, id));
 }
 
 // ============================

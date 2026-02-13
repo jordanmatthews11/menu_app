@@ -40,6 +40,50 @@
   white-space: nowrap;
 }
 
+/* Help button */
+.header-help-btn {
+  padding: 0.3rem 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.header-help-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.header-help-btn--active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Admin button */
+.header-admin-btn {
+  padding: 0.3rem 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.header-admin-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.header-admin-btn--active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
 .header-signout {
   padding: 0.3rem 0.7rem;
   background: rgba(255, 255, 255, 0.15);

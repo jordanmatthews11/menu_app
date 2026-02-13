@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import type { Booster } from '../../types';
+import type { Booster, BoosterSelection } from '../../types';
 
 interface BoosterPickerProps {
   boosters: Booster[];
-  selectedBoosterIds: string[];
+  selectedBoosters: BoosterSelection[];
   onToggleBooster: (boosterId: string) => void;
+  onUpdateBoosterQuota: (boosterId: string, monthlyQuota: number) => void;
 }
 
 export const BoosterPicker = ({
   boosters,
-  selectedBoosterIds,
+  selectedBoosters,
   onToggleBooster,
+  onUpdateBoosterQuota,
 }: BoosterPickerProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [search, setSearch] = useState('');
@@ -19,7 +21,8 @@ export const BoosterPicker = ({
     b.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  const selectedCount = selectedBoosterIds.length;
+  const selectedIds = selectedBoosters.map((s) => s.boosterId);
+  const selectedCount = selectedBoosters.length;
 
   return (
     <div className="booster-picker">
@@ -36,19 +39,33 @@ export const BoosterPicker = ({
 
       {selectedCount > 0 && (
         <div className="selected-boosters">
-          {selectedBoosterIds.map((id) => {
-            const booster = boosters.find((b) => b.id === id);
+          {selectedBoosters.map((sel) => {
+            const booster = boosters.find((b) => b.id === sel.boosterId);
             if (!booster) return null;
             return (
-              <div key={id} className="selected-booster-tag">
-                <span>{booster.name}</span>
-                <button
-                  className="btn-remove-tag"
-                  onClick={() => onToggleBooster(id)}
-                  title="Remove"
-                >
-                  x
-                </button>
+              <div key={sel.boosterId} className="selected-booster-row">
+                <div className="selected-booster-tag">
+                  <span>{booster.name}</span>
+                  <button
+                    className="btn-remove-tag"
+                    onClick={() => onToggleBooster(sel.boosterId)}
+                    title="Remove"
+                  >
+                    x
+                  </button>
+                </div>
+                <div className="booster-quota-input">
+                  <label>Monthly stores:</label>
+                  <input
+                    type="number"
+                    min={1}
+                    value={sel.monthlyQuota || ''}
+                    placeholder="0"
+                    onChange={(e) =>
+                      onUpdateBoosterQuota(sel.boosterId, parseInt(e.target.value, 10) || 0)
+                    }
+                  />
+                </div>
               </div>
             );
           })}
@@ -80,7 +97,7 @@ export const BoosterPicker = ({
                 <p className="no-data">No boosters found.</p>
               ) : (
                 filteredBoosters.map((booster) => {
-                  const isSelected = selectedBoosterIds.includes(booster.id);
+                  const isSelected = selectedIds.includes(booster.id);
                   return (
                     <label key={booster.id} className={`booster-item ${isSelected ? 'selected' : ''}`}>
                       <input
@@ -97,7 +114,7 @@ export const BoosterPicker = ({
             </div>
 
             <div className="modal-footer">
-              <span>{selectedBoosterIds.length} selected</span>
+              <span>{selectedCount} selected</span>
               <button className="btn btn-primary" onClick={() => setIsModalOpen(false)}>
                 Done
               </button>

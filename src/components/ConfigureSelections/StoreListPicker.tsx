@@ -42,7 +42,6 @@ export const StoreListPicker = ({
           {storeLists.map((list) => {
             const isSelected = selectedListNames.includes(list.name);
             const isExpanded = expandedLists.includes(list.name);
-            const totalWeekly = list.retailers.reduce((sum, r) => sum + r.weeklyQuota, 0);
             const totalMonthly = list.retailers.reduce((sum, r) => sum + r.monthlyQuota, 0);
 
             return (
@@ -58,7 +57,7 @@ export const StoreListPicker = ({
                     <span className="list-name">{list.name}</span>
                   </label>
                   <div className="list-meta">
-                    <span className="quota-badge">{totalWeekly}w / {totalMonthly}m</span>
+                    <span className="quota-badge">{totalMonthly} per month</span>
                     <button
                       className="btn-expand"
                       onClick={() => toggleExpand(list.name)}
@@ -75,7 +74,7 @@ export const StoreListPicker = ({
                       <div key={retailer.id} className="retailer-row">
                         <span className="retailer-name">{retailer.retailer}</span>
                         <span className="retailer-quota">
-                          {retailer.weeklyQuota}w / {retailer.monthlyQuota}m
+                          {retailer.monthlyQuota} per month
                         </span>
                       </div>
                     ))}

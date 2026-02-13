@@ -58,12 +58,17 @@ export interface Booster {
   country: string;
 }
 
+export interface BoosterSelection {
+  boosterId: string;
+  monthlyQuota: number;
+}
+
 export interface CategoryConfig {
   categoryId: string;
   categoryName: string;
   country: string;
   selectedStoreLists: string[];
-  selectedBoosters: string[];
+  selectedBoosters: BoosterSelection[];
   startDate: string;
   endDate: string;
   collectionNotes: string;
@@ -105,4 +110,13 @@ export interface CustomCategoryCode {
   jobIds: string;
   codeType: string;
   timestamp: string;
+}
+
+export interface SubmittedOrder {
+  id: string;
+  submittedBy: string;
+  submittedByEmail: string;
+  submittedAt: string;
+  entries: OrderEntry[];
+  status: 'submitted';
 }

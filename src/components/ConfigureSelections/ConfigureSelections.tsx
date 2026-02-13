@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { Category, CategoryConfig, StoreList, Booster, OrderEntry } from '../../types';
+import type { CategoryCountrySelection } from '../CategorySelection';
 import { loadStoreLists } from '../../data/storeLists';
 import { loadBoosters } from '../../data/boosters';
 import { CategoryConfigPanel } from './CategoryConfigPanel';
@@ -9,6 +10,7 @@ import './ConfigureSelections.css';
 interface ConfigureSelectionsProps {
   categories: Category[];
   selectedCategoryIds: string[];
+  selectedCountryMap: CategoryCountrySelection[];
   onBack: () => void;
   onSubmit: (entries: OrderEntry[]) => void;
 }
@@ -16,6 +18,7 @@ interface ConfigureSelectionsProps {
 export const ConfigureSelections = ({
   categories,
   selectedCategoryIds,
+  selectedCountryMap,
   onBack,
   onSubmit,
 }: ConfigureSelectionsProps) => {
@@ -33,7 +36,11 @@ export const ConfigureSelections = ({
 
     const initialConfigs: CategoryConfig[] = [];
     selectedCats.forEach((cat) => {
-      cat.countries.forEach((country) => {
+      // Use only the countries the user picked (from the country picker)
+      const sel = selectedCountryMap.find((s) => s.categoryId === cat.id);
+      const countriesToUse = sel ? sel.countries : cat.countries;
+
+      countriesToUse.forEach((country) => {
         initialConfigs.push({
           categoryId: cat.id,
           categoryName: cat.name,
@@ -54,7 +61,7 @@ export const ConfigureSelections = ({
         `${initialConfigs[0].categoryId}::${initialConfigs[0].country}`
       );
     }
-  }, [categories, selectedCategoryIds]);
+  }, [categories, selectedCategoryIds, selectedCountryMap]);
 
   // Load store lists and boosters
   useEffect(() => {
@@ -84,7 +91,7 @@ export const ConfigureSelections = ({
       prev.map((config) => ({
         ...config,
         selectedStoreLists: [...source.selectedStoreLists],
-        selectedBoosters: [...source.selectedBoosters],
+        selectedBoosters: source.selectedBoosters.map((s) => ({ ...s })),
         startDate: source.startDate,
         endDate: source.endDate,
         collectionNotes: source.collectionNotes,
@@ -162,7 +169,6 @@ export const ConfigureSelections = ({
               retailer: r.retailer,
               type: 'standard',
               storeListName: listName,
-              weeklyQuota: r.weeklyQuota,
               monthlyQuota: r.monthlyQuota,
               startDate: new Date(config.startDate),
               endDate: new Date(config.endDate),
@@ -173,8 +179,8 @@ export const ConfigureSelections = ({
       });
 
       // Add booster entries
-      config.selectedBoosters.forEach((boosterId) => {
-        const booster = boosters.find((b) => b.id === boosterId);
+      config.selectedBoosters.forEach((sel) => {
+        const booster = boosters.find((b) => b.id === sel.boosterId);
         if (booster) {
           entries.push({
             id: `${Date.now()}-${Math.random()}`,
@@ -182,6 +188,7 @@ export const ConfigureSelections = ({
             country: config.country,
             retailer: booster.name,
             type: 'booster',
+            monthlyQuota: sel.monthlyQuota,
             startDate: new Date(config.startDate),
             endDate: new Date(config.endDate),
             collectionNotes: config.collectionNotes,

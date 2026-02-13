@@ -229,7 +229,6 @@ export const StoreListsAdmin = () => {
       <div className="admin-accordion">
         {filtered.map((list) => {
           const isExpanded = expandedId === list.id;
-          const totalWeekly = list.retailers.reduce((s, r) => s + r.weeklyQuota, 0);
           const totalMonthly = list.retailers.reduce((s, r) => s + r.monthlyQuota, 0);
 
           return (
@@ -239,7 +238,7 @@ export const StoreListsAdmin = () => {
                 <span className="admin-acc-name">{list.name}</span>
                 <span className="admin-badge">{list.country}</span>
                 <span className="admin-acc-count">{list.retailers.length} retailers</span>
-                <span className="admin-acc-totals">W: {totalWeekly} &middot; M: {totalMonthly}</span>
+                <span className="admin-acc-totals">M: {totalMonthly}</span>
                 <button
                   className="admin-btn admin-btn--sm admin-btn--danger"
                   onClick={(e) => { e.stopPropagation(); handleDeleteList(list.id, list.name); }}
@@ -254,7 +253,6 @@ export const StoreListsAdmin = () => {
                     <thead>
                       <tr>
                         <th>Retailer</th>
-                        <th>Weekly</th>
                         <th>Monthly</th>
                         <th>Actions</th>
                       </tr>
@@ -265,9 +263,6 @@ export const StoreListsAdmin = () => {
                           <tr key={r.id} className="admin-row-editing">
                             <td>
                               <input value={editRetData.retailer} onChange={(e) => setEditRetData({ ...editRetData, retailer: e.target.value })} />
-                            </td>
-                            <td>
-                              <input type="number" value={editRetData.weeklyQuota} onChange={(e) => setEditRetData({ ...editRetData, weeklyQuota: Number(e.target.value) })} />
                             </td>
                             <td>
                               <input type="number" value={editRetData.monthlyQuota} onChange={(e) => setEditRetData({ ...editRetData, monthlyQuota: Number(e.target.value) })} />
@@ -284,7 +279,6 @@ export const StoreListsAdmin = () => {
                         ) : (
                           <tr key={r.id}>
                             <td>{r.retailer}</td>
-                            <td className="num">{r.weeklyQuota}</td>
                             <td className="num">{r.monthlyQuota}</td>
                             <td className="admin-table-actions">
                               <button className="admin-btn admin-btn--sm admin-btn--secondary" onClick={() => startEditRetailer(list.id, idx, r)}>
@@ -305,9 +299,6 @@ export const StoreListsAdmin = () => {
                             <input placeholder="Retailer name" value={newRetData.retailer} onChange={(e) => setNewRetData({ ...newRetData, retailer: e.target.value })} />
                           </td>
                           <td>
-                            <input type="number" placeholder="0" value={newRetData.weeklyQuota || ''} onChange={(e) => setNewRetData({ ...newRetData, weeklyQuota: Number(e.target.value) })} />
-                          </td>
-                          <td>
                             <input type="number" placeholder="0" value={newRetData.monthlyQuota || ''} onChange={(e) => setNewRetData({ ...newRetData, monthlyQuota: Number(e.target.value) })} />
                           </td>
                           <td className="admin-table-actions">
@@ -324,7 +315,6 @@ export const StoreListsAdmin = () => {
                     <tfoot>
                       <tr>
                         <td>Total</td>
-                        <td className="num">{totalWeekly}</td>
                         <td className="num">{totalMonthly}</td>
                         <td></td>
                       </tr>

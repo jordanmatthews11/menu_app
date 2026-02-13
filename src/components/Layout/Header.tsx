@@ -6,9 +6,13 @@ interface HeaderProps {
   currentStep: number;
   totalSteps: number;
   showSteps?: boolean;
+  onAdminClick?: () => void;
+  isAdminActive?: boolean;
+  onHelpClick?: () => void;
+  isHelpActive?: boolean;
 }
 
-export const Header = ({ currentStep, totalSteps, showSteps = true }: HeaderProps) => {
+export const Header = ({ currentStep, totalSteps, showSteps = true, onAdminClick, isAdminActive, onHelpClick, isHelpActive }: HeaderProps) => {
   const { user, logOut } = useAuth();
 
   return (
@@ -21,6 +25,22 @@ export const Header = ({ currentStep, totalSteps, showSteps = true }: HeaderProp
               <img className="header-avatar" src={user.photoURL} alt="" referrerPolicy="no-referrer" />
             )}
             <span className="header-name">{user.displayName || user.email}</span>
+            {onHelpClick && (
+              <button
+                className={`header-help-btn${isHelpActive ? ' header-help-btn--active' : ''}`}
+                onClick={onHelpClick}
+              >
+                {isHelpActive ? '\u2190 Back to App' : 'How to Use'}
+              </button>
+            )}
+            {onAdminClick && (
+              <button
+                className={`header-admin-btn${isAdminActive ? ' header-admin-btn--active' : ''}`}
+                onClick={onAdminClick}
+              >
+                {isAdminActive ? '\u2190 Back to App' : 'Admin'}
+              </button>
+            )}
             <button className="header-signout" onClick={logOut}>
               Sign Out
             </button>

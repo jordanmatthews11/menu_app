@@ -1,5 +1,7 @@
 import './StepIndicator.css';
 
+const STEP_LABELS = ['Select Categories', 'Configure Retailers', 'Review & Submit'];
+
 interface StepIndicatorProps {
   currentStep: number;
   totalSteps: number;
@@ -20,6 +22,9 @@ export const StepIndicator = ({ currentStep, totalSteps }: StepIndicatorProps) =
             >
               {isCompleted ? '✓' : stepNumber}
             </div>
+            <span className={`step-label ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}`}>
+              {STEP_LABELS[index] || `Step ${stepNumber}`}
+            </span>
             {index < totalSteps - 1 && (
               <div className={`step-line ${isCompleted ? 'completed' : ''}`} />
             )}
