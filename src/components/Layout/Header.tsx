@@ -18,7 +18,7 @@ export const Header = ({ currentStep, totalSteps, showSteps = true, onAdminClick
   return (
     <header className="app-header">
       <div className="header-row">
-        <h1>Order Submission</h1>
+        <h1>Storesight Menu</h1>
         {user && (
           <div className="header-user">
             {user.photoURL && (
