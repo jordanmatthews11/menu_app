@@ -23,6 +23,9 @@ export const CategorySelection = ({ selectedCategories, onNext }: CategorySelect
   const [countryPickerCat, setCountryPickerCat] = useState<Category | null>(null);
   const [pickerCountries, setPickerCountries] = useState<string[]>([]);
 
+  // Premium list popup state
+  const [showPremiumList, setShowPremiumList] = useState(false);
+
   useEffect(() => {
     loadCategories().then((loadedCategories) => {
       setCategories(loadedCategories);
@@ -151,6 +154,10 @@ export const CategorySelection = ({ selectedCategories, onNext }: CategorySelect
         </button>
       </div>
 
+      <div className="premium-key" onClick={() => setShowPremiumList(true)}>
+        <span className="premium-key-star">&#9733;</span> = Premium Category
+      </div>
+
       <div className="table-container">
         <table className="categories-table">
           <thead>
@@ -213,6 +220,31 @@ export const CategorySelection = ({ selectedCategories, onNext }: CategorySelect
           </tbody>
         </table>
       </div>
+
+      {/* Premium Categories Modal */}
+      {showPremiumList && (
+        <div className="premium-modal-overlay" onClick={() => setShowPremiumList(false)}>
+          <div className="premium-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="premium-modal-header">
+              <h3>Premium Categories</h3>
+              <button className="premium-modal-close" onClick={() => setShowPremiumList(false)}>&times;</button>
+            </div>
+            <div className="premium-modal-list">
+              {categories.filter((c) => c.premium).map((cat) => (
+                <div key={cat.id} className="premium-modal-item">
+                  <span className="premium-modal-star">&#9733;</span>
+                  <span className="premium-modal-name">{cat.name}</span>
+                  <span className="premium-modal-dept">{cat.department}</span>
+                  <span className="premium-modal-countries">{cat.countries.join(', ')}</span>
+                </div>
+              ))}
+              {categories.filter((c) => c.premium).length === 0 && (
+                <p className="premium-modal-empty">No premium categories found.</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Country Picker Modal */}
       {countryPickerCat && (
