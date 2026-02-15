@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import type { CategoryConfig, StoreList, Booster } from '../../types';
 
-interface SummaryRow {
+interface MergedRow {
   retailer: string;
-  type: 'Standard' | 'Booster';
-  monthlyQuota: number;
+  standardQuota: number;
+  boosterQuota: number;
 }
 
 interface SelectionSummaryProps {
@@ -27,8 +27,8 @@ export const SelectionSummary = ({
       )
     : configs;
 
-  // Build raw rows then merge duplicates by retailer+type
-  const rawRows: SummaryRow[] = [];
+  // Build merged rows by retailer name, combining standard + booster quotas
+  const mergedMap = new Map<string, MergedRow>();
 
   relevantConfigs.forEach((config) => {
     // Add standard store list retailers
@@ -38,11 +38,16 @@ export const SelectionSummary = ({
       );
       if (list) {
         list.retailers.forEach((r) => {
-          rawRows.push({
-            retailer: r.retailer,
-            type: 'Standard',
-            monthlyQuota: r.monthlyQuota,
-          });
+          const existing = mergedMap.get(r.retailer);
+          if (existing) {
+            existing.standardQuota += r.monthlyQuota;
+          } else {
+            mergedMap.set(r.retailer, {
+              retailer: r.retailer,
+              standardQuota: r.monthlyQuota,
+              boosterQuota: 0,
+            });
+          }
         });
       }
     });
@@ -51,26 +56,20 @@ export const SelectionSummary = ({
     config.selectedBoosters.forEach((sel) => {
       const booster = boosters.find((b) => b.id === sel.boosterId);
       if (booster) {
-        rawRows.push({
-          retailer: booster.name,
-          type: 'Booster',
-          monthlyQuota: sel.monthlyQuota,
-        });
+        const existing = mergedMap.get(booster.name);
+        if (existing) {
+          existing.boosterQuota += sel.monthlyQuota;
+        } else {
+          mergedMap.set(booster.name, {
+            retailer: booster.name,
+            standardQuota: 0,
+            boosterQuota: sel.monthlyQuota,
+          });
+        }
       }
     });
   });
 
-  // Merge rows that share the same retailer name and type
-  const mergedMap = new Map<string, SummaryRow>();
-  rawRows.forEach((row) => {
-    const key = `${row.retailer}::${row.type}`;
-    const existing = mergedMap.get(key);
-    if (existing) {
-      existing.monthlyQuota += row.monthlyQuota;
-    } else {
-      mergedMap.set(key, { ...row });
-    }
-  });
   const summaryRows = Array.from(mergedMap.values());
 
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -87,16 +86,9 @@ export const SelectionSummary = ({
     return () => obs.disconnect();
   }, [summaryRows.length]);
 
-  const standardRows = summaryRows.filter((r) => r.type === 'Standard');
-  const boosterRows = summaryRows.filter((r) => r.type === 'Booster');
-  const totalStdMonthly = standardRows.reduce(
-    (s, r) => s + r.monthlyQuota,
-    0
-  );
-  const totalBoosterMonthly = boosterRows.reduce(
-    (s, r) => s + r.monthlyQuota,
-    0
-  );
+  const totalStdMonthly = summaryRows.reduce((s, r) => s + r.standardQuota, 0);
+  const totalBoosterMonthly = summaryRows.reduce((s, r) => s + r.boosterQuota, 0);
+  const boosterCount = summaryRows.filter((r) => r.boosterQuota > 0).length;
   const totalMonthly = totalStdMonthly + totalBoosterMonthly;
 
   return (
@@ -117,19 +109,33 @@ export const SelectionSummary = ({
                 </tr>
               </thead>
               <tbody>
-                {summaryRows.map((row, i) => (
-                  <tr key={`${row.retailer}-${row.type}-${i}`}>
-                    <td>{row.retailer}</td>
-                    <td>
-                      <span
-                        className={`type-badge ${row.type.toLowerCase()}`}
-                      >
-                        {row.type}
-                      </span>
-                    </td>
-                    <td>{row.monthlyQuota || '-'}</td>
-                  </tr>
-                ))}
+                {summaryRows.map((row) => {
+                  const total = row.standardQuota + row.boosterQuota;
+                  const hasStandard = row.standardQuota > 0;
+                  const hasBooster = row.boosterQuota > 0;
+                  return (
+                    <tr key={row.retailer}>
+                      <td>{row.retailer}</td>
+                      <td>
+                        {hasStandard && (
+                          <span className="type-badge standard">Standard</span>
+                        )}
+                        {hasStandard && hasBooster && ' '}
+                        {hasBooster && (
+                          <span className="type-badge booster">Booster</span>
+                        )}
+                      </td>
+                      <td>
+                        {total}
+                        {hasStandard && hasBooster && (
+                          <span className="quota-breakdown">
+                            ({row.standardQuota} + {row.boosterQuota} boost)
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -146,11 +152,11 @@ export const SelectionSummary = ({
                 <span className="total-label">Standard Monthly Quota:</span>
                 <span className="total-value">{totalStdMonthly} stores</span>
               </div>
-              {boosterRows.length > 0 && (
+              {boosterCount > 0 && (
                 <>
                   <div className="total-item">
                     <span className="total-label">Boosters:</span>
-                    <span className="total-value">{boosterRows.length} retailer{boosterRows.length !== 1 ? 's' : ''}</span>
+                    <span className="total-value">{boosterCount} retailer{boosterCount !== 1 ? 's' : ''}</span>
                   </div>
                   <div className="total-item">
                     <span className="total-label">Booster Monthly Quota:</span>

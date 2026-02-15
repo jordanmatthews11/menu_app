@@ -648,6 +648,14 @@
   background: #f8f9fa;
 }
 
+.quota-breakdown {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.65rem;
+  color: #888;
+  font-weight: 400;
+}
+
 .type-badge {
   display: inline-block;
   padding: 1px 7px;
