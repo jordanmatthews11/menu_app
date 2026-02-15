@@ -191,7 +191,10 @@ export const CategorySelection = ({ selectedCategories, onNext }: CategorySelect
                         />
                       </div>
                     </td>
-                    <td className="col-name">{category.name}</td>
+                    <td className="col-name">
+                      {category.name}
+                      {category.premium && <span className="premium-star" title="Premium Category">&#9733;</span>}
+                    </td>
                     <td className="col-department">{category.department}</td>
                     <td className="col-brands">{category.exampleBrands || '-'}</td>
                     <td className="col-description" title={category.description}>
