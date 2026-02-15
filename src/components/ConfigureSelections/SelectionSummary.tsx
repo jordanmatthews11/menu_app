@@ -27,7 +27,8 @@ export const SelectionSummary = ({
       )
     : configs;
 
-  const summaryRows: SummaryRow[] = [];
+  // Build raw rows then merge duplicates by retailer+type
+  const rawRows: SummaryRow[] = [];
 
   relevantConfigs.forEach((config) => {
     // Add standard store list retailers
@@ -37,7 +38,7 @@ export const SelectionSummary = ({
       );
       if (list) {
         list.retailers.forEach((r) => {
-          summaryRows.push({
+          rawRows.push({
             retailer: r.retailer,
             type: 'Standard',
             monthlyQuota: r.monthlyQuota,
@@ -50,7 +51,7 @@ export const SelectionSummary = ({
     config.selectedBoosters.forEach((sel) => {
       const booster = boosters.find((b) => b.id === sel.boosterId);
       if (booster) {
-        summaryRows.push({
+        rawRows.push({
           retailer: booster.name,
           type: 'Booster',
           monthlyQuota: sel.monthlyQuota,
@@ -58,6 +59,19 @@ export const SelectionSummary = ({
       }
     });
   });
+
+  // Merge rows that share the same retailer name and type
+  const mergedMap = new Map<string, SummaryRow>();
+  rawRows.forEach((row) => {
+    const key = `${row.retailer}::${row.type}`;
+    const existing = mergedMap.get(key);
+    if (existing) {
+      existing.monthlyQuota += row.monthlyQuota;
+    } else {
+      mergedMap.set(key, { ...row });
+    }
+  });
+  const summaryRows = Array.from(mergedMap.values());
 
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [canScroll, setCanScroll] = useState(false);
