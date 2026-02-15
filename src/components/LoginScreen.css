@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #7554C2 0%, #4E339C 100%);
+  background: linear-gradient(135deg, #4E339C 0%, #1a0a3e 100%);
   padding: 1rem;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .login-logo {
-  color: #7554C2;
+  color: #4E339C;
   margin-bottom: 1rem;
 }
 
