@@ -18,7 +18,10 @@ export const Header = ({ currentStep, totalSteps, showSteps = true, onAdminClick
   return (
     <header className="app-header">
       <div className="header-row">
-        <h1>Storesight Menu</h1>
+        <div className="header-brand">
+          <img className="header-logo" src="/storesight-logo.png" alt="Storesight" />
+          <h1>Storesight Menu</h1>
+        </div>
         {user && (
           <div className="header-user">
             {user.photoURL && (

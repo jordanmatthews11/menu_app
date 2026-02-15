@@ -222,7 +222,28 @@ export const ConfigureSelections = ({
     <div className="configure-selections">
       <div className="configure-header">
         <h2>Configure Selections ({configs.length} categor{configs.length === 1 ? 'y' : 'ies'})</h2>
+        <div className="configure-header-actions">
+          <button className="btn btn-secondary" onClick={onBack}>
+            Back to Categories
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={handleSubmitOrder}
+            disabled={warnings.length > 0}
+          >
+            Submit Order
+          </button>
+        </div>
       </div>
+
+      {warnings.length > 0 && (
+        <div className="validation-bar">
+          <span className="warn-icon">!</span>
+          <span>
+            You have {categoriesNeedingAttention} categor{categoriesNeedingAttention === 1 ? 'y' : 'ies'} that require a list selection and/or a collection period.
+          </span>
+        </div>
+      )}
 
       <div className="configure-layout">
         <div className="configure-left">
@@ -258,15 +279,6 @@ export const ConfigureSelections = ({
           />
         </div>
       </div>
-
-      {warnings.length > 0 && (
-        <div className="validation-bar">
-          <span className="warn-icon">!</span>
-          <span>
-            You have {categoriesNeedingAttention} categor{categoriesNeedingAttention === 1 ? 'y' : 'ies'} that require a list selection and/or a collection period.
-          </span>
-        </div>
-      )}
 
       <div className="configure-footer">
         <button className="btn btn-secondary" onClick={onBack}>
