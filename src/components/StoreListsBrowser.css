@@ -52,7 +52,7 @@
 
 .slb-search:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #7554C2;
 }
 
 .slb-search-count {
@@ -74,7 +74,7 @@
 
 .slb-country-filter:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #7554C2;
 }
 
 /* Actions bar (select all + export) */
@@ -103,7 +103,7 @@
 
 .slb-selected-count {
   font-size: 0.85rem;
-  color: #4a90e2;
+  color: #7554C2;
   font-weight: 600;
 }
 
@@ -148,7 +148,7 @@
 }
 
 .slb-card--selected {
-  border-color: #4a90e2;
+  border-color: #7554C2;
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
 }
 
@@ -193,8 +193,8 @@
 }
 
 .slb-country {
-  background: #e3f2fd;
-  color: #1565c0;
+  background: #ECE5FF;
+  color: #4E339C;
   padding: 1px 8px;
   border-radius: 4px;
   font-size: 0.8rem;

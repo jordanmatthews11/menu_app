@@ -91,8 +91,8 @@
 }
 
 .config-country {
-  background: #e8f4f8;
-  color: #4a90e2;
+  background: #ECE5FF;
+  color: #7554C2;
   padding: 1px 8px;
   border-radius: 4px;
   font-size: 0.75rem;
@@ -191,7 +191,7 @@
 .btn-link {
   background: none;
   border: none;
-  color: #4a90e2;
+  color: #7554C2;
   cursor: pointer;
   font-size: 0.78rem;
   text-decoration: underline;
@@ -235,7 +235,7 @@
 .list-checkbox input[type="checkbox"] {
   width: 15px;
   height: 15px;
-  accent-color: #4a90e2;
+  accent-color: #7554C2;
   cursor: pointer;
 }
 
@@ -251,8 +251,8 @@
 }
 
 .quota-badge {
-  background: #e3f2fd;
-  color: #1565c0;
+  background: #ECE5FF;
+  color: #4E339C;
   padding: 1px 7px;
   border-radius: 4px;
   font-size: 0.72rem;
@@ -326,8 +326,8 @@
 
 .btn-add-edit {
   background: white;
-  border: 1px solid #4a90e2;
-  color: #4a90e2;
+  border: 1px solid #7554C2;
+  color: #7554C2;
   padding: 4px 12px;
   border-radius: 5px;
   cursor: pointer;
@@ -336,7 +336,7 @@
 }
 
 .btn-add-edit:hover {
-  background: #e8f4f8;
+  background: #ECE5FF;
 }
 
 .selected-boosters {
@@ -357,12 +357,12 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: #e8f4f8;
-  border: 1px solid #b3d4fc;
+  background: #ECE5FF;
+  border: 1px solid #C39CFF;
   border-radius: 16px;
   padding: 3px 10px;
   font-size: 0.78rem;
-  color: #1565c0;
+  color: #4E339C;
 }
 
 .booster-quota-input {
@@ -389,7 +389,7 @@
 
 .booster-quota-input input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #7554C2;
 }
 
 .btn-remove-tag {
@@ -469,7 +469,7 @@
 
 .modal-search input:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #7554C2;
 }
 
 .modal-list {
@@ -494,13 +494,13 @@
 }
 
 .booster-item.selected {
-  background: #e8f4f8;
+  background: #ECE5FF;
 }
 
 .booster-item input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #4a90e2;
+  accent-color: #7554C2;
   cursor: pointer;
 }
 
@@ -558,7 +558,7 @@
 
 .date-input:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #7554C2;
 }
 
 .notes-section {
@@ -577,7 +577,7 @@
 
 .notes-textarea:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #7554C2;
 }
 
 /* ================================================
@@ -761,12 +761,12 @@
 }
 
 .btn-primary {
-  background-color: #4a90e2;
+  background-color: #7554C2;
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #357abd;
+  background-color: #4E339C;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
 }

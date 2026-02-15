@@ -59,7 +59,7 @@
 
 .sor-search:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #7554C2;
 }
 
 .sor-empty {
@@ -93,7 +93,7 @@
 }
 
 .sor-card--expanded {
-  border-color: #667eea;
+  border-color: #7554C2;
 }
 
 /* Card summary row */
@@ -145,7 +145,7 @@
 
 .sor-order-num {
   font-weight: 700;
-  color: #667eea;
+  color: #7554C2;
   font-size: 1rem;
   min-width: 32px;
 }
@@ -254,8 +254,8 @@
 
 .sor-country-badge {
   display: inline-block;
-  background: #e3f2fd;
-  color: #1565c0;
+  background: #ECE5FF;
+  color: #4E339C;
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.78rem;

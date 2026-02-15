@@ -52,7 +52,7 @@
 
 .help-toc a:hover {
   background: #f0f4ff;
-  color: #4a90e2;
+  color: #7554C2;
 }
 
 .help-toc .toc-sub {
@@ -132,7 +132,7 @@
 /* Tip callout boxes */
 .help-tip {
   background: #f0f7ff;
-  border-left: 4px solid #4a90e2;
+  border-left: 4px solid #7554C2;
   padding: 0.65rem 1rem;
   border-radius: 0 6px 6px 0;
   margin: 0.75rem 0;

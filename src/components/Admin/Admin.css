@@ -100,7 +100,7 @@
 }
 
 .admin-tab--active {
-  color: #4a90e2;
+  color: #7554C2;
   font-weight: 600;
 }
 
@@ -111,7 +111,7 @@
   right: 0;
   bottom: -2px;
   height: 3px;
-  background: #4a90e2;
+  background: #7554C2;
   border-radius: 3px 3px 0 0;
 }
 
@@ -137,7 +137,7 @@
 
 .admin-search:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #7554C2;
 }
 
 .admin-count {
@@ -164,7 +164,7 @@
 }
 
 .admin-btn--primary {
-  background: #4a90e2;
+  background: #7554C2;
   color: white;
 }
 
@@ -239,7 +239,7 @@
 .admin-form-grid input:focus,
 .admin-form-grid textarea:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #7554C2;
 }
 
 .admin-form-wide {
@@ -356,8 +356,8 @@
 
 .admin-badge {
   display: inline-block;
-  background: #e3f2fd;
-  color: #1565c0;
+  background: #ECE5FF;
+  color: #4E339C;
   padding: 1px 8px;
   border-radius: 4px;
   font-size: 0.78rem;
@@ -395,7 +395,7 @@
 }
 
 .admin-acc-item--open {
-  border-color: #4a90e2;
+  border-color: #7554C2;
 }
 
 .admin-acc-header {

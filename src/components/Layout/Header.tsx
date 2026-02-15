@@ -20,7 +20,7 @@ export const Header = ({ currentStep, totalSteps, showSteps = true, onAdminClick
       <div className="header-row">
         <div className="header-brand">
           <img className="header-logo" src="/storesight-logo.png" alt="Storesight" />
-          <h1>Storesight Menu</h1>
+          <h1>Menu</h1>
         </div>
         {user && (
           <div className="header-user">
