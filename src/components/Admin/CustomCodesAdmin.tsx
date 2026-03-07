@@ -1,12 +1,14 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import type { CustomCategoryCode } from '../../types';
 import {
   fetchCustomCodes,
   addCustomCode,
   updateCustomCode,
   deleteCustomCode,
+  batchWriteCustomCodes,
 } from '../../services/firestoreService';
 import { exportToCsv } from '../../utils/exportCsv';
+import { parseUploadedFile, getCol } from '../../utils/fileUploader';
 import { useAuth } from '../../contexts/AuthContext';
 
 const EMPTY_CODE: Omit<CustomCategoryCode, 'id'> = {
@@ -34,6 +36,8 @@ export const CustomCodesAdmin = () => {
     timestamp: new Date().toISOString(),
   });
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -138,6 +142,39 @@ export const CustomCodesAdmin = () => {
     }
   };
 
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    e.target.value = '';
+    setUploading(true);
+    try {
+      const rows = await parseUploadedFile(file);
+      const codes: Omit<CustomCategoryCode, 'id'>[] = rows
+        .map((row) => {
+          const categoryCode = getCol(row, 'categoryCode', 'categorycode');
+          if (!categoryCode.trim()) return null;
+          return {
+            categoryCode: categoryCode.trim(),
+            customer: getCol(row, 'customer'),
+            category: getCol(row, 'category'),
+            submittedBy: getCol(row, 'submittedBy', 'submittedby') || user?.displayName || user?.email || '',
+            notes: getCol(row, 'notes'),
+            jobIds: getCol(row, 'jobIds', 'jobids'),
+            codeType: getCol(row, 'codeType', 'codetype') || 'Custom',
+            timestamp: getCol(row, 'timestamp') || new Date().toISOString(),
+          };
+        })
+        .filter((c): c is Omit<CustomCategoryCode, 'id'> => c !== null);
+      const count = await batchWriteCustomCodes(codes);
+      await load();
+      alert(`Imported ${count} custom category codes.`);
+    } catch (err) {
+      alert('Upload failed: ' + (err instanceof Error ? err.message : err));
+    } finally {
+      setUploading(false);
+    }
+  };
+
   if (loading) return <p className="admin-loading">Loading custom category codes...</p>;
 
   return (
@@ -155,6 +192,22 @@ export const CustomCodesAdmin = () => {
           onClick={() => exportToCsv('customcategorycodes-export.csv', filtered.map(({ id: _id, ...rest }) => rest))}
         >
           Export CSV
+        </button>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".csv,.xlsx"
+          className="admin-file-input"
+          onChange={handleUpload}
+          aria-hidden
+        />
+        <button
+          type="button"
+          className="admin-btn admin-btn--secondary admin-upload-btn"
+          onClick={() => fileInputRef.current?.click()}
+          disabled={uploading}
+        >
+          {uploading ? 'Uploading...' : 'Upload CSV/XLSX'}
         </button>
         <button
           className="admin-btn admin-btn--primary"

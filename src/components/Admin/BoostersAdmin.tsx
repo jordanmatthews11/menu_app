@@ -1,11 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import type { Booster } from '../../types';
 import { exportToCsv } from '../../utils/exportCsv';
+import { parseUploadedFile, getCol } from '../../utils/fileUploader';
 import {
   fetchBoosters,
   addBooster,
   updateBooster,
   deleteBooster,
+  batchWriteBoosters,
 } from '../../services/firestoreService';
 import { invalidateBoostersCache } from '../../data/boosters';
 
@@ -18,6 +20,8 @@ export const BoostersAdmin = () => {
   const [showAdd, setShowAdd] = useState(false);
   const [addData, setAddData] = useState({ name: '', country: '' });
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -96,6 +100,30 @@ export const BoostersAdmin = () => {
     }
   };
 
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    e.target.value = '';
+    setUploading(true);
+    try {
+      const rows = await parseUploadedFile(file);
+      const boosters = rows
+        .map((row) => ({
+          name: getCol(row, 'name'),
+          country: getCol(row, 'country'),
+        }))
+        .filter((b) => b.name.trim() !== '' && b.country.trim() !== '');
+      const count = await batchWriteBoosters(boosters);
+      invalidateBoostersCache();
+      await load();
+      alert(`Imported ${count} boosters.`);
+    } catch (err) {
+      alert('Upload failed: ' + (err instanceof Error ? err.message : err));
+    } finally {
+      setUploading(false);
+    }
+  };
+
   if (loading) return <p className="admin-loading">Loading boosters...</p>;
 
   return (
@@ -113,6 +141,22 @@ export const BoostersAdmin = () => {
           onClick={() => exportToCsv('boosters-export.csv', filtered.map(({ id: _id, ...rest }) => rest))}
         >
           Export CSV
+        </button>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".csv,.xlsx"
+          className="admin-file-input"
+          onChange={handleUpload}
+          aria-hidden
+        />
+        <button
+          type="button"
+          className="admin-btn admin-btn--secondary admin-upload-btn"
+          onClick={() => fileInputRef.current?.click()}
+          disabled={uploading}
+        >
+          {uploading ? 'Uploading...' : 'Upload CSV/XLSX'}
         </button>
         <button
           className="admin-btn admin-btn--primary"

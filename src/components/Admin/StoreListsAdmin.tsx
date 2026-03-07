@@ -1,11 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import type { StoreListDoc, StoreListRetailer } from '../../types';
 import { exportToCsv } from '../../utils/exportCsv';
+import { parseUploadedFile, getCol } from '../../utils/fileUploader';
 import {
   fetchStoreLists,
   addStoreList,
   updateStoreList,
   deleteStoreList,
+  batchWriteStoreLists,
 } from '../../services/firestoreService';
 import { invalidateStoreListsCache } from '../../data/storeLists';
 
@@ -33,6 +35,8 @@ export const StoreListsAdmin = () => {
   const [newRetData, setNewRetData] = useState<Omit<StoreListRetailer, 'id'>>(EMPTY_RETAILER);
 
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -164,6 +168,47 @@ export const StoreListsAdmin = () => {
     }
   };
 
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    e.target.value = '';
+    setUploading(true);
+    try {
+      const rows = await parseUploadedFile(file);
+      const byKey = new Map<string, Omit<StoreListDoc, 'id'>>();
+      for (const row of rows) {
+        const name = getCol(row, 'name');
+        const country = getCol(row, 'country');
+        const retailer = getCol(row, 'retailer');
+        if (!name.trim() || !country.trim()) continue;
+        const key = `${name}|${country}`;
+        const weeklyQuota = parseInt(getCol(row, 'weeklyQuota', 'weeklyquota'), 10) || 0;
+        const monthlyQuota = parseInt(getCol(row, 'monthlyQuota', 'monthlyquota'), 10) || 0;
+        if (!byKey.has(key)) {
+          byKey.set(key, { name: name.trim(), country: country.trim(), retailers: [] });
+        }
+        const list = byKey.get(key)!;
+        if (retailer.trim()) {
+          list.retailers.push({
+            id: crypto.randomUUID(),
+            retailer: retailer.trim(),
+            weeklyQuota,
+            monthlyQuota,
+          });
+        }
+      }
+      const storeLists = Array.from(byKey.values());
+      const count = await batchWriteStoreLists(storeLists);
+      invalidateStoreListsCache();
+      await load();
+      alert(`Imported ${count} store lists.`);
+    } catch (err) {
+      alert('Upload failed: ' + (err instanceof Error ? err.message : err));
+    } finally {
+      setUploading(false);
+    }
+  };
+
   if (loading) return <p className="admin-loading">Loading store lists...</p>;
 
   return (
@@ -192,6 +237,22 @@ export const StoreListsAdmin = () => {
           }}
         >
           Export CSV
+        </button>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".csv,.xlsx"
+          className="admin-file-input"
+          onChange={handleUpload}
+          aria-hidden
+        />
+        <button
+          type="button"
+          className="admin-btn admin-btn--secondary admin-upload-btn"
+          onClick={() => fileInputRef.current?.click()}
+          disabled={uploading}
+        >
+          {uploading ? 'Uploading...' : 'Upload CSV/XLSX'}
         </button>
         <button
           className="admin-btn admin-btn--primary"

@@ -1,11 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import type { CategoryDoc } from '../../types';
 import { exportToCsv } from '../../utils/exportCsv';
+import { parseUploadedFile, getCol } from '../../utils/fileUploader';
 import {
   fetchCategories,
   addCategory,
   updateCategory,
   deleteCategory,
+  batchWriteCategories,
 } from '../../services/firestoreService';
 import { invalidateCategoriesCache } from '../../data/categories';
 
@@ -30,6 +32,8 @@ export const CategoriesAdmin = () => {
   const [showAdd, setShowAdd] = useState(false);
   const [addData, setAddData] = useState<Omit<CategoryDoc, 'id'>>(EMPTY_CAT);
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -123,6 +127,35 @@ export const CategoriesAdmin = () => {
     }
   };
 
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    e.target.value = '';
+    setUploading(true);
+    try {
+      const rows = await parseUploadedFile(file);
+      const categories: Omit<CategoryDoc, 'id'>[] = rows.map((row) => ({
+        name: getCol(row, 'name'),
+        country: getCol(row, 'country'),
+        department: getCol(row, 'department'),
+        subDepartment: getCol(row, 'subDepartment', 'subdepartment'),
+        description: getCol(row, 'description'),
+        exampleBrands: getCol(row, 'exampleBrands', 'examplebrands'),
+        notes: getCol(row, 'notes'),
+        number: getCol(row, 'number'),
+        premium: /^(1|true|yes)$/i.test(getCol(row, 'premium')),
+      })).filter((c) => c.name.trim() !== '');
+      const count = await batchWriteCategories(categories);
+      invalidateCategoriesCache();
+      await load();
+      alert(`Imported ${count} categories.`);
+    } catch (err) {
+      alert('Upload failed: ' + (err instanceof Error ? err.message : err));
+    } finally {
+      setUploading(false);
+    }
+  };
+
   if (loading) return <p className="admin-loading">Loading categories...</p>;
 
   return (
@@ -140,6 +173,22 @@ export const CategoriesAdmin = () => {
           onClick={() => exportToCsv('categories-export.csv', filtered.map(({ id: _id, ...rest }) => rest))}
         >
           Export CSV
+        </button>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".csv,.xlsx"
+          className="admin-file-input"
+          onChange={handleUpload}
+          aria-hidden
+        />
+        <button
+          type="button"
+          className="admin-btn admin-btn--secondary admin-upload-btn"
+          onClick={() => fileInputRef.current?.click()}
+          disabled={uploading}
+        >
+          {uploading ? 'Uploading...' : 'Upload CSV/XLSX'}
         </button>
         <button
           className="admin-btn admin-btn--primary"

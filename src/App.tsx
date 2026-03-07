@@ -11,14 +11,13 @@ import { ConfigureSelections } from './components/ConfigureSelections/ConfigureS
 import { OrderTable } from './components/OrderTable';
 import { StoreListsBrowser } from './components/StoreListsBrowser';
 import { MasterCodeDirectory } from './components/MasterCodeDirectory';
-import { SubmittedOrdersReview } from './components/SubmittedOrdersReview';
 import { AdminScreen } from './components/Admin/AdminScreen';
 import { HelpGuide } from './components/HelpGuide';
 import './App.css';
 
 const STORAGE_KEY = 'orderEntries';
 
-type ActiveTab = 'order' | 'storeLists' | 'codeDirectory' | 'reviewOrders';
+type ActiveTab = 'order' | 'storeLists' | 'codeDirectory';
 
 function AppContent() {
   const { user, isAuthorized, loading } = useAuth();
@@ -165,13 +164,7 @@ function AppContent() {
               className={`tab-btn${activeTab === 'order' ? ' tab-btn--active' : ''}`}
               onClick={() => setActiveTab('order')}
             >
-              Order Submission
-            </button>
-            <button
-              className={`tab-btn${activeTab === 'reviewOrders' ? ' tab-btn--active' : ''}`}
-              onClick={() => setActiveTab('reviewOrders')}
-            >
-              Review Submitted Orders
+              Categories
             </button>
             <button
               className={`tab-btn${activeTab === 'storeLists' ? ' tab-btn--active' : ''}`}
@@ -217,8 +210,6 @@ function AppContent() {
                 )}
               </>
             )}
-
-            {activeTab === 'reviewOrders' && <SubmittedOrdersReview />}
 
             {activeTab === 'storeLists' && <StoreListsBrowser />}
 

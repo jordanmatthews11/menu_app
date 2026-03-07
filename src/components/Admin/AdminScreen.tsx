@@ -4,11 +4,12 @@ import { StoreListsAdmin } from './StoreListsAdmin';
 import { BoostersAdmin } from './BoostersAdmin';
 import { AuthorizedUsersAdmin } from './AuthorizedUsersAdmin';
 import { CustomCodesAdmin } from './CustomCodesAdmin';
+import { SubmittedOrdersReview } from '../SubmittedOrdersReview';
 import { seedFirestoreFromCSVs } from '../../utils/seedFirestore';
 import type { SeedResult } from '../../utils/seedFirestore';
 import './Admin.css';
 
-type AdminTab = 'categories' | 'storeLists' | 'boosters' | 'customCodes' | 'users';
+type AdminTab = 'categories' | 'storeLists' | 'boosters' | 'customCodes' | 'users' | 'reviewOrders';
 
 export const AdminScreen = () => {
   const [tab, setTab] = useState<AdminTab>('categories');
@@ -116,6 +117,12 @@ export const AdminScreen = () => {
         >
           Authorized Users
         </button>
+        <button
+          className={`admin-tab${tab === 'reviewOrders' ? ' admin-tab--active' : ''}`}
+          onClick={() => setTab('reviewOrders')}
+        >
+          Review Submitted Orders
+        </button>
       </div>
 
       <div className="admin-body">
@@ -124,6 +131,7 @@ export const AdminScreen = () => {
         {tab === 'boosters' && <BoostersAdmin />}
         {tab === 'customCodes' && <CustomCodesAdmin />}
         {tab === 'users' && <AuthorizedUsersAdmin />}
+        {tab === 'reviewOrders' && <SubmittedOrdersReview />}
       </div>
     </div>
   );
