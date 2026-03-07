@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import * as XLSX from 'xlsx';
 import type { StoreList } from '../types';
 import { loadStoreLists } from '../data/storeLists';
+import { ListGenie } from './ListGenie';
 import './StoreListsBrowser.css';
 
 export const StoreListsBrowser = () => {
@@ -10,6 +11,7 @@ export const StoreListsBrowser = () => {
   const [search, setSearch] = useState('');
   const [countryFilter, setCountryFilter] = useState('All');
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
+  const [showGenie, setShowGenie] = useState(false);
 
   useEffect(() => {
     loadStoreLists().then((lists) => {
@@ -140,6 +142,12 @@ export const StoreListsBrowser = () => {
           <span className="slb-selected-count">{selectedKeys.size} selected</span>
         )}
         <button
+          className={`slb-genie-btn${showGenie ? ' slb-genie-btn--active' : ''}`}
+          onClick={() => setShowGenie((v) => !v)}
+        >
+          {showGenie ? 'Hide List Genie' : 'List Genie'}
+        </button>
+        <button
           className="slb-export-btn"
           onClick={exportToExcel}
           disabled={selectedKeys.size === 0}
@@ -147,6 +155,8 @@ export const StoreListsBrowser = () => {
           Export to Excel
         </button>
       </div>
+
+      {showGenie && <ListGenie storeLists={storeLists} />}
 
       {filtered.length === 0 ? (
         <p className="slb-empty">No store lists match your search.</p>

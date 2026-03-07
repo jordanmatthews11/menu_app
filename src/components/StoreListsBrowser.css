@@ -107,6 +107,31 @@
   font-weight: 600;
 }
 
+.slb-genie-btn {
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #7554C2;
+  border: 1px solid #7554C2;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.slb-genie-btn:hover {
+  background: #ECE5FF;
+}
+
+.slb-genie-btn--active {
+  background: #7554C2;
+  color: white;
+}
+
+.slb-genie-btn--active:hover {
+  background: #4E339C;
+}
+
 .slb-export-btn {
   margin-left: auto;
   padding: 0.5rem 1.25rem;
