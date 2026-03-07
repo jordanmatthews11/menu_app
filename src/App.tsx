@@ -170,7 +170,7 @@ function AppContent() {
               className={`tab-btn${activeTab === 'storeLists' ? ' tab-btn--active' : ''}`}
               onClick={() => setActiveTab('storeLists')}
             >
-              Standard Store Lists
+              Retailer/Channel Mix List
             </button>
             <button
               className={`tab-btn${activeTab === 'codeDirectory' ? ' tab-btn--active' : ''}`}

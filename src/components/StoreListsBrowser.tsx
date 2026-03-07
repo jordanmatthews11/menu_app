@@ -97,7 +97,7 @@ export const StoreListsBrowser = () => {
     <div className="slb">
       <div className="slb-header">
         <div>
-          <h2>Standard Store Lists</h2>
+          <h2>Retailer/Channel Mix List</h2>
           <p className="slb-subtitle">
             Browse the standard list for your customer. Select a list below to see what retailers, store count, and PDF versions are available.
           </p>
