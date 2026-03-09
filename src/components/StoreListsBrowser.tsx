@@ -99,7 +99,7 @@ export const StoreListsBrowser = () => {
         <div>
           <h2>Retailer/Channel Mix List</h2>
           <p className="slb-subtitle">
-            Browse the standard list for your customer. Select a list below to see what retailers, store count, and PDF versions are available.
+            Choose how you want to find the right retailer/channel mix: either browse all standard options or let the Genie recommend the best match.
           </p>
         </div>
       </div>
