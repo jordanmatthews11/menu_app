@@ -11,7 +11,7 @@ export const StoreListsBrowser = () => {
   const [search, setSearch] = useState('');
   const [countryFilter, setCountryFilter] = useState('All');
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
-  const [showGenie, setShowGenie] = useState(false);
+  const [view, setView] = useState<'browse' | 'genie'>('browse');
 
   useEffect(() => {
     loadStoreLists().then((lists) => {
@@ -104,112 +104,127 @@ export const StoreListsBrowser = () => {
         </div>
       </div>
 
-      <div className="slb-toolbar">
-        <input
-          type="text"
-          className="slb-search"
-          placeholder="Search store lists or retailers..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <select
-          className="slb-country-filter"
-          value={countryFilter}
-          onChange={(e) => setCountryFilter(e.target.value)}
-        >
-          <option value="All">All Countries</option>
-          {countries.map((c) => (
-            <option key={c} value={c}>{c}</option>
-          ))}
-        </select>
-        {(search || countryFilter !== 'All') && (
-          <span className="slb-search-count">
-            {filtered.length} list{filtered.length !== 1 ? 's' : ''}
-          </span>
-        )}
-      </div>
-
-      <div className="slb-actions-bar">
-        <label className="slb-select-all">
-          <input
-            type="checkbox"
-            checked={filtered.length > 0 && filtered.every((l) => selectedKeys.has(listKey(l)))}
-            onChange={selectAll}
-          />
-          <span>Select All</span>
-        </label>
-        {selectedKeys.size > 0 && (
-          <span className="slb-selected-count">{selectedKeys.size} selected</span>
-        )}
+      <div className="slb-subtabs">
         <button
-          className={`slb-genie-btn${showGenie ? ' slb-genie-btn--active' : ''}`}
-          onClick={() => setShowGenie((v) => !v)}
+          type="button"
+          className={`slb-subtab${view === 'browse' ? ' slb-subtab--active' : ''}`}
+          onClick={() => setView('browse')}
         >
-          {showGenie ? 'Hide List Genie' : 'List Genie'}
+          Retailer/Channel Mix List Options
         </button>
         <button
-          className="slb-export-btn"
-          onClick={exportToExcel}
-          disabled={selectedKeys.size === 0}
+          type="button"
+          className={`slb-subtab${view === 'genie' ? ' slb-subtab--active' : ''}`}
+          onClick={() => setView('genie')}
         >
-          Export to Excel
+          List Genie
         </button>
       </div>
 
-      {showGenie && <ListGenie storeLists={storeLists} />}
-
-      {filtered.length === 0 ? (
-        <p className="slb-empty">No store lists match your search.</p>
+      {view === 'genie' ? (
+        <ListGenie storeLists={storeLists} />
       ) : (
-        <div className="slb-scroll">
-          {filtered.map((list) => {
-            const totalMonthly = list.retailers.reduce((s, r) => s + r.monthlyQuota, 0);
+        <>
+          <div className="slb-toolbar">
+            <input
+              type="text"
+              className="slb-search"
+              placeholder="Search store lists or retailers..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <select
+              className="slb-country-filter"
+              value={countryFilter}
+              onChange={(e) => setCountryFilter(e.target.value)}
+            >
+              <option value="All">All Countries</option>
+              {countries.map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
+            {(search || countryFilter !== 'All') && (
+              <span className="slb-search-count">
+                {filtered.length} list{filtered.length !== 1 ? 's' : ''}
+              </span>
+            )}
+          </div>
 
-            return (
-              <div className={`slb-card${selectedKeys.has(listKey(list)) ? ' slb-card--selected' : ''}`} key={listKey(list)}>
-                <div className="slb-card-header">
-                  <label className="slb-card-check" onClick={(e) => e.stopPropagation()}>
-                    <input
-                      type="checkbox"
-                      checked={selectedKeys.has(listKey(list))}
-                      onChange={() => toggleSelect(listKey(list))}
-                    />
-                  </label>
-                  <h3 className="slb-card-title">{list.name}</h3>
-                  <div className="slb-card-meta">
-                    <span className="slb-country">{list.country}</span>
-                    <span className="slb-count">{list.retailers.length} Retailers</span>
+          <div className="slb-actions-bar">
+            <label className="slb-select-all">
+              <input
+                type="checkbox"
+                checked={filtered.length > 0 && filtered.every((l) => selectedKeys.has(listKey(l)))}
+                onChange={selectAll}
+              />
+              <span>Select All</span>
+            </label>
+            {selectedKeys.size > 0 && (
+              <span className="slb-selected-count">{selectedKeys.size} selected</span>
+            )}
+            <button
+              className="slb-export-btn"
+              onClick={exportToExcel}
+              disabled={selectedKeys.size === 0}
+            >
+              Export to Excel
+            </button>
+          </div>
+
+          {filtered.length === 0 ? (
+            <p className="slb-empty">No store lists match your search.</p>
+          ) : (
+            <div className="slb-scroll">
+              {filtered.map((list) => {
+                const totalMonthly = list.retailers.reduce((s, r) => s + r.monthlyQuota, 0);
+
+                return (
+                  <div className={`slb-card${selectedKeys.has(listKey(list)) ? ' slb-card--selected' : ''}`} key={listKey(list)}>
+                    <div className="slb-card-header">
+                      <label className="slb-card-check" onClick={(e) => e.stopPropagation()}>
+                        <input
+                          type="checkbox"
+                          checked={selectedKeys.has(listKey(list))}
+                          onChange={() => toggleSelect(listKey(list))}
+                        />
+                      </label>
+                      <h3 className="slb-card-title">{list.name}</h3>
+                      <div className="slb-card-meta">
+                        <span className="slb-country">{list.country}</span>
+                        <span className="slb-count">{list.retailers.length} Retailers</span>
+                      </div>
+                    </div>
+
+                    <div className="slb-card-table-wrap">
+                      <table className="slb-card-table">
+                        <thead>
+                          <tr>
+                            <th>Retailer</th>
+                            <th>Monthly</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {list.retailers.map((r) => (
+                            <tr key={r.id}>
+                              <td>{r.retailer}</td>
+                              <td className="num">{r.monthlyQuota}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td>Total</td>
+                            <td className="num">{totalMonthly}</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
                   </div>
-                </div>
-
-                <div className="slb-card-table-wrap">
-                  <table className="slb-card-table">
-                    <thead>
-                      <tr>
-                        <th>Retailer</th>
-                        <th>Monthly</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {list.retailers.map((r) => (
-                        <tr key={r.id}>
-                          <td>{r.retailer}</td>
-                          <td className="num">{r.monthlyQuota}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <td>Total</td>
-                        <td className="num">{totalMonthly}</td>
-                      </tr>
-                    </tfoot>
-                  </table>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+                );
+              })}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

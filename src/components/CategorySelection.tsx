@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { Category } from '../types';
 import { loadCategories } from '../data/categories';
 import './CategorySelection.css';
@@ -18,6 +18,7 @@ export const CategorySelection = ({ selectedCategories, onNext }: CategorySelect
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<CategoryCountrySelection[]>(selectedCategories);
   const [searchQuery, setSearchQuery] = useState('');
+  const [countryFilter, setCountryFilter] = useState<string>('All');
 
   // Country picker popup state
   const [countryPickerCat, setCountryPickerCat] = useState<Category | null>(null);
@@ -84,7 +85,19 @@ export const CategorySelection = ({ selectedCategories, onNext }: CategorySelect
     }
   };
 
+  const allCountries = useMemo(() => {
+    const set = new Set<string>();
+    categories.forEach((cat) => {
+      cat.countries.forEach((c) => set.add(c));
+    });
+    return Array.from(set).sort();
+  }, [categories]);
+
   const filteredCategories = categories.filter((category) => {
+    if (countryFilter !== 'All' && !category.countries.includes(countryFilter)) {
+      return false;
+    }
+
     if (!searchQuery.trim()) return true;
 
     const query = searchQuery.toLowerCase();
@@ -127,6 +140,18 @@ export const CategorySelection = ({ selectedCategories, onNext }: CategorySelect
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
+        <div className="country-filter">
+          <select
+            className="country-filter-select"
+            value={countryFilter}
+            onChange={(e) => setCountryFilter(e.target.value)}
+          >
+            <option value="All">All Countries</option>
+            {allCountries.map((c) => (
+              <option key={c} value={c}>{c}</option>
+            ))}
+          </select>
+        </div>
         {searchQuery && (
           <span className="search-results">
             {filteredCategories.length} result{filteredCategories.length !== 1 ? 's' : ''}
